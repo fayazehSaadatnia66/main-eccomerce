@@ -1,9 +1,10 @@
-
 import NextAuth, { AuthError } from "next-auth"
 import Credentials from "next-auth/providers/credentials"
 import { LoginSchema } from "./schemas"
 import google from "next-auth/providers/google"
 import axios from "axios"
+import api from "./utils/axiosConfig"
+import { CustomError } from "./utils/CustomError"
 
 export const {
   handlers: { GET, POST },
@@ -23,37 +24,35 @@ export const {
         if (!validateFields.success) return null
 
         const { screenName, password, code } = validateFields.data
-        const response = await fetch(
-          "http://localhost:8086/api/v1/auth/signin",
-          {
-            method: "POST",
-            body: JSON.stringify({
-              screenName: screenName,
-              password: password,
-              code: code === "undefined" ? null : code
-            }),
-            redirect: "follow",
-            headers: {
-              "Content-Type": "application/json"
-            }
-          }
-        )
-        if (!response.ok) return null
-        const res = await response.json()
+        const body = {
+          screenName: screenName,
+          password: password,
+          code: code === "undefined" ? null : code
+        }
+        const res = await api.post("/api/v1/auth/signin", body).catch((err) => {
+          throw new CustomError(err)
+        })
+        // const response = await fetch(
+        //   "http://localhost:8086/api/v1/auth/signin",
+        //   {
+        //     method: "POST",
+        //     body: JSON.stringify(body),
+        //     redirect: "follow",
+        //     headers: {
+        //       "Content-Type": "application/json"
+        //     }
+        //   }
+        // )
+        // if (!response.ok) return null
+        // const res = await response.json()
         console.log(res)
-        if (res.error) {
-          throw new AuthError(res.message)
-        }
-
-        if (res.message?.includes("Confirmation email sent")) {
-          throw new AuthError(res.message)
-        }
 
         return {
-          email: res.userData.email,
-          id: res.userData.id,
-          name: res.userData.fullName
+          email: res.data.userData.email,
+          id: res.data.userData.id,
+          name: res.data.userData.fullName
         }
+
         // return res
       }
     })
