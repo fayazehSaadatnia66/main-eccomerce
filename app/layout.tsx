@@ -1,13 +1,8 @@
+import { cn } from "@/lib/utils"
 import type { Metadata } from "next"
 import localFont from "next/font/local"
 import "./globals.css"
-import NavigationMenu from "@/components/layout/navbar/navigation-menu"
-import { cn } from "@/lib/utils"
-import { MainLogo } from "@/components/layout/header/logo"
-import SearchBar from "@/components/layout/header/search-bar"
-import LoginRegisterButton from "@/components/layout/header/login-register-button"
-import { ShoppingCartButton } from "@/components/layout/header/shopping-cart-button"
-import { Separator } from "@/components/ui/separator"
+import Head from "next/head"
 
 const vazir = localFont({
   src: [
@@ -23,6 +18,9 @@ const vazir = localFont({
 export const metadata: Metadata = {
   title: "کد مارکت",
   description: "فروشگاهی برای همه برنامه نویسها"
+  // icons: {
+  //   icon: "favicon.ico"
+  // }
 }
 
 export default function RootLayout({
@@ -32,22 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl">
-      <body className={cn(vazir.className, "container")}>
-        <div className=" w-full h-[80px] px-4 py-[20px] flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <MainLogo />
-            <SearchBar />
-          </div>
-          <div className="flex items-center h-6 gap-4">
-            <LoginRegisterButton />
-            <Separator orientation="vertical" />
-            <ShoppingCartButton />
-          </div>
-        </div>
-        <NavigationMenu />
-        {children}
-        {/* <Footer /> */}
-      </body>
+      <Head>
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </Head>
+      <body className={cn(vazir.className)}>{children}</body>
     </html>
   )
 }

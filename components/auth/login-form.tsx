@@ -42,7 +42,7 @@ const LoginForm = () => {
     type: "error"
   })
   const [showTwoFactor, setShowTwoFactor] = useState(false)
-  const [success, setSuccess] = useState<string | undefined>("")
+  // const [success, setSuccess] = useState<string | undefined>("")
   const form = useForm<z.infer<typeof LoginSchema>>({
     resolver: zodResolver(LoginSchema),
     defaultValues: {
@@ -75,10 +75,10 @@ const LoginForm = () => {
             form.setValue("twoFactor", true)
             setShowTwoFactor(true)
           }
-          if (data?.success) {
-            form.reset()
-            setSuccess(data.success)
-          }
+          // if (data?.success) {
+          //   form.reset()
+          //   setSuccess(data.success)
+          // }
         })
         .catch((err) => {
           console.log(err)
@@ -99,10 +99,12 @@ const LoginForm = () => {
             ? "border-red-500"
             : ""
         }
+        key={field.value + index}
         index={index}
       />
     )
   }
+
   return (
     <CardWrapper
       headerLabel="خوش آمدید"
@@ -138,42 +140,7 @@ const LoginForm = () => {
                             .map((_, index) => {
                               return renderInputSlot(index, fieldState, field)
                             })}
-                          {/* <InputOTPSlot
-                            className={
-                              fieldState.invalid &&
-                              (!field.value || field.value?.length < 1)
-                                ? "border-red-500"
-                                : ""
-                            }
-                            index={0}
-                          />
-                          <InputOTPSlot
-                            className={
-                              fieldState.invalid ? "border-red-500" : ""
-                            }
-                            index={1}
-                          />
-                          <InputOTPSlot
-                            className={
-                              fieldState.invalid ? "border-red-500" : ""
-                            }
-                            index={2}
-                          />
-                          <InputOTPSlot
-                            className={
-                              fieldState.invalid ? "border-red-500" : ""
-                            }
-                            index={3}
-                          />
-                          <InputOTPSlot
-                            className={
-                              fieldState.invalid ? "border-red-500" : ""
-                            }
-                            index={4}
-                          /> */}
                         </InputOTPGroup>
-                        {/* <InputOTPSeparator /> */}
-                        {/* <InputOTPGroup></InputOTPGroup> */}
                       </InputOTP>
                     </FormControl>
                     <FormMessage />
@@ -228,21 +195,14 @@ const LoginForm = () => {
               </>
             )}
             <FormField
-              // control={form.control}
               name="twoFactor"
               render={({ field }) => (
                 <FormItem hidden>
-                  {/* <FormControl> */}
-                  <Checkbox
-                    {...field}
-                    checked={showTwoFactor}
-                    // onCheckedChange={field.onChange}
-                  />
-                  {/* </FormControl> */}
+                  <Checkbox {...field} checked={showTwoFactor} />
                   <FormMessage />
                 </FormItem>
               )}
-            ></FormField>
+            />
           </div>
           <FormError
             message={message.type === "error" ? message.message : ""}
