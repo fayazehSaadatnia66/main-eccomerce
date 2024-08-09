@@ -17,10 +17,10 @@ const vazir = localFont({
 
 export const metadata: Metadata = {
   title: "کد مارکت",
-  description: "فروشگاهی برای همه برنامه نویسها"
-  // icons: {
-  //   icon: "favicon.ico"
-  // }
+  description: "فروشگاهی برای همه برنامه نویسها",
+  icons: {
+    icon: "favicon.ico"
+  }
 }
 
 export default function RootLayout({
@@ -30,9 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl">
-      <Head>
+      {/* <Head>
         <link rel="shortcut icon" href="/favicon.ico" />
-      </Head>
+      </Head> */}
       <body className={cn(vazir.className)}>{children}</body>
     </html>
   )

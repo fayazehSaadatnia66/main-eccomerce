@@ -8,8 +8,13 @@ import {
   CarouselPrevious
 } from "@/components/ui/carousel"
 import { MdKeyboardArrowLeft } from "react-icons/md"
+import { cn } from "@/lib/utils"
+import { ClassNameValue } from "tailwind-merge"
 
-export const LinearSlider = () => {
+type LinearSliderProps = {
+  bgClassName?: ClassNameValue
+}
+export const LinearSlider = ({ bgClassName }: LinearSliderProps) => {
   return (
     <Carousel
       opts={{
@@ -17,7 +22,7 @@ export const LinearSlider = () => {
         dragFree: true,
         direction: "rtl"
       }}
-      className="w-full border py-5 bg-primary rounded-xl"
+      className={cn("w-full border py-5  rounded-xl", bgClassName)}
     >
       <CarouselContent>
         <div className="w-[200px] flex-none px-3 py-1 text-3xl text-center h-[250px] cursor-pointer text-white ">
