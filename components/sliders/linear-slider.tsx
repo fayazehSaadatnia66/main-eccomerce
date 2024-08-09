@@ -8,10 +8,13 @@ import {
   CarouselPrevious
 } from "@/components/ui/carousel"
 import { MdKeyboardArrowLeft } from "react-icons/md"
+import Products from "./products/products"
 
 export const LinearSlider = () => {
   return (
-    <Carousel
+    <div className="w-full">
+    <Products />
+        <Carousel
       opts={{
         align: "start",
         dragFree: true,
@@ -52,5 +55,7 @@ export const LinearSlider = () => {
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>
+    </div>
+
   )
 }
