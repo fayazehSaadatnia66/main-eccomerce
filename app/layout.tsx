@@ -8,25 +8,26 @@ import SearchBar from "@/components/layout/header/search-bar"
 import LoginRegisterButton from "@/components/layout/header/login-register-button"
 import { ShoppingCartButton } from "@/components/layout/header/shopping-cart-button"
 import { Separator } from "@/components/ui/separator"
+import Products from "@/components/layout/products/products"
 
 const vazir = localFont({
   src: [
     {
       path: "/ui/fonts/shabnam/Shabnam-Medium-FD.woff2",
       weight: "400",
-      style: "normal"
-    }
+      style: "normal",
+    },
   ],
-  variable: "--font-vazir"
+  variable: "--font-vazir",
 })
 
 export const metadata: Metadata = {
   title: "کد مارکت",
-  description: "فروشگاهی برای همه برنامه نویسها"
+  description: "فروشگاهی برای همه برنامه نویسها",
 }
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
@@ -45,6 +46,7 @@ export default function RootLayout({
           </div>
         </div>
         <NavigationMenu />
+        <Products />
         {children}
         {/* <Footer /> */}
       </body>
