@@ -23,7 +23,7 @@ export const LinearSlider = ({ bgClassName }: LinearSliderProps) => {
           dragFree: true,
           direction: "rtl"
         }}
-        className={cn("w-full border py-5  rounded-xl", bgClassName)}
+        className={cn("w-full border py-5 rounded-xl", bgClassName)}
       >
         <CarouselContent>
           <div className="w-[200px] flex-none px-3 py-1 text-3xl text-center h-[250px] cursor-pointer text-white ">

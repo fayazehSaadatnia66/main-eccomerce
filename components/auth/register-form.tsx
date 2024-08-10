@@ -11,7 +11,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
@@ -26,10 +26,10 @@ const RegisterForm = () => {
   const form = useForm<z.infer<typeof RegisterSchema>>({
     resolver: zodResolver(RegisterSchema),
     defaultValues: {
-      email: "",
+      // email: "",
       password: "",
-      name: "",
-    },
+      name: ""
+    }
   })
   const onSubmit = (values: z.infer<typeof RegisterSchema>) => {
     setError("")
@@ -76,9 +76,7 @@ const RegisterForm = () => {
               name="screenName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="float-end mb-3">
-                    نام کاربری
-                  </FormLabel>
+                  <FormLabel className="float-end mb-3">نام کاربری</FormLabel>
                   <FormControl>
                     <Input
                       className="text-end"
