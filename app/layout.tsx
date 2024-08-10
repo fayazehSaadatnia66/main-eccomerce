@@ -9,10 +9,10 @@ const vazir = localFont({
     {
       path: "/ui/fonts/shabnam/Shabnam-Medium-FD.woff2",
       weight: "400",
-      style: "normal"
-    }
+      style: "normal",
+    },
   ],
-  variable: "--font-vazir"
+  variable: "--font-vazir",
 })
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
