@@ -26,7 +26,7 @@ const MainNavigationMenu = () => {
       <NavigationMenu className="w-full " dir="rtl">
         <NavigationMenuList>
           {navItems.map(({ name, icon: Icon, children }, index) => (
-            <NavigationMenuItem>
+            <NavigationMenuItem key={name}>
               <NavigationMenuTrigger>
                 <div
                   className={cn(
@@ -65,8 +65,12 @@ const MainNavigationMenu = () => {
                       </Link>
                     </NavigationMenuLink>
                   </li> */}
-                  {children.map((childItem) => (
-                    <ListItem href={childItem.href} title={childItem.name}>
+                  {children.map((childItem, index) => (
+                    <ListItem
+                      key={childItem.name + index}
+                      href={childItem.href}
+                      title={childItem.name}
+                    >
                       {childItem.description}
                     </ListItem>
                   ))}

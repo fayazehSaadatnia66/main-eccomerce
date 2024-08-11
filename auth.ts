@@ -60,24 +60,24 @@ export const {
   callbacks: {
     async signIn({ user, account }) {
       if (account?.provider !== "credentials") return true
-      const response = await fetch(
-        `http://localhost:8086/api/v1/users/${user.id}`,
-        {
-          credentials: "include"
-        } // credentials: "include"
-      )
+      // const response = await fetch(
+      //   `http://localhost:8086/api/v1/users/${user.id}`,
+      //   {
+      //     credentials: "include"
+      //   } // credentials: "include"
+      // )
       // if (!response.ok) return token
-      const existingUser = await response.json()
-      if (existingUser.isTwoFactoreEnabled) {
-        const twoFactorConfirmation = await axios.get(
-          `http://localhost:8086/api/v1/auth/two-factor/confirmation/by-user-id/${existingUser.id}`
-        )
-        if (!twoFactorConfirmation) return false
+      // const existingUser = await response.json()
+      // if (existingUser.isTwoFactoreEnabled) {
+      //   const twoFactorConfirmation = await axios.get(
+      //     `http://localhost:8086/api/v1/auth/two-factor/confirmation/by-user-id/${existingUser.id}`
+      //   )
+      //   if (!twoFactorConfirmation) return false
 
-        await axios.delete(
-          `http://localhost:8086/api/v1/auth/two-factor/delete-confirmation/${twoFactorConfirmation.id}`
-        )
-      }
+      //   await axios.delete(
+      //     `http://localhost:8086/api/v1/auth/two-factor/delete-confirmation/${twoFactorConfirmation.id}`
+      //   )
+      // }
       return true
     },
     // session is global session use in app with auth()

@@ -1,5 +1,4 @@
 import React from "react"
-import { PiShoppingCartLight } from "react-icons/pi"
 import shopCart from "/public/images/shopping-cart.svg"
 import Image from "next/image"
 export const ShoppingCartButton = () => {
