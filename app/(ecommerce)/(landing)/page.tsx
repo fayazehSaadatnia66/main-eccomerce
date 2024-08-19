@@ -11,6 +11,8 @@ import world from "@/public/images/wrold.png"
 import accountabilityProduct from "@/public/images/accountability.jpeg"
 import phpProduct from "@/public/images/php.png"
 import programProduct from "@/public/images/Programming.jpeg"
+import TripleSlider from "@/components/sliders/triple-slider"
+import ThreeDCarousel from "@/components/sliders/three-slider"
 
 const icons = [
   { name: "هوش مصنوعی", icon: brain },
@@ -27,6 +29,10 @@ const HomePage = () => {
   return (
     <div className="w-full flex flex-col gap-5 py-4 justify-center">
       <TripleBanner item={item} />
+      <div className="flex items-center justify-center">
+          <ThreeDCarousel />
+      </div>
+      <TripleSlider />
       <CircleItems icons={icons} />
       <LinearSlider bgClassName="bg-primary" />
       <LinearBanner
