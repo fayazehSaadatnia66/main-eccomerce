@@ -2,19 +2,29 @@ import phpProduct from "../../public/images/php.png"
 import accountabilityProduct from "../../public/images/accountability.jpeg"
 import Image from "next/image"
 import programProduct from "../../public/images/Programming.jpeg"
-import { StaticImport } from "next/dist/shared/lib/get-img-props"
-type Item = {
-    src: string | StaticImport
-    alt:string
-}
-type TripleBannerProps = {
-top:Item,
-bottom:Item, 
-left:Item
+import {
+  StaticImageData,
+  StaticImport,
+} from "next/dist/shared/lib/get-img-props"
 
+type TripleBannerProps = {
+  item: {
+    top: {
+      src: StaticImageData
+      alt: string
+    }
+    bottom: {
+      src: StaticImageData
+      alt: string
+    }
+    left: {
+      src: StaticImageData
+      alt: string
+    }
+  }
 }
-export const TripleBanner = ({item}: TripleBannerProps) => {
-    console.log(item)
+export const TripleBanner = ({ item }: TripleBannerProps) => {
+  console.log(item)
   return (
     <div className="flex gap-2 h-[380px] mb-5">
       <div className="basis-1/2 flex-col gap-2 flex">

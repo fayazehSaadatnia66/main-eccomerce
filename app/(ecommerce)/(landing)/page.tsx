@@ -12,13 +12,21 @@ import accountabilityProduct from "@/public/images/accountability.jpeg"
 import phpProduct from "@/public/images/php.png"
 import programProduct from "@/public/images/Programming.jpeg"
 import TripleSlider from "@/components/sliders/triple-slider"
-import ThreeDCarousel from "@/components/sliders/three-slider"
+import ThreeCarousel from "@/components/sliders/three-slider"
+import code1 from "@/public/images/code1.jpeg"
+import code2 from "@/public/images/code2.jpeg"
+import code3 from "@/public/images/code3.jpeg"
 
 const icons = [
   { name: "هوش مصنوعی", icon: brain },
   { name: "اسکریپت", icon: script },
   { name: "قالب Html", icon: themeHtml },
   { name: "قالب", icon: world },
+]
+const images = [
+  { item: code1, alt: "image1" },
+  { item: code2, alt: "image2" },
+  { item: code3, alt: "image3" },
 ]
 const item = {
   top: { src: accountabilityProduct, alt: "عکس بالا" },
@@ -30,9 +38,10 @@ const HomePage = () => {
     <div className="w-full flex flex-col gap-5 py-4 justify-center">
       <TripleBanner item={item} />
       <div className="flex items-center justify-center">
-          <ThreeDCarousel />
+        <ThreeCarousel images={images}/>
       </div>
-      <TripleSlider />
+    
+      {/* <TripleSlider /> */}
       <CircleItems icons={icons} />
       <LinearSlider bgClassName="bg-primary" />
       <LinearBanner
