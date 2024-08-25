@@ -26,7 +26,7 @@ const icons = [
   { name: "قالب Html", icon: themeHtml },
   { name: "قالب", icon: world }
 ]
-const images = [
+const imagesSlider = [
   { item: code1, alt: "image1" },
   { item: code2, alt: "image2" },
   { item: code3, alt: "image3" },
@@ -54,9 +54,9 @@ const HomePage = () => {
       </div> */}
       {/* <TripleSlider /> */}
 
-      <StackSlider items={images}/>
+      <StackSlider items={imagesSlider}/>
       <CircleItems icons={icons} />
-      <LinearSlider bgClassName="bg-primary" items={images} />
+      <LinearSlider bgClassName=" bg-red-600" items={imagesSlider} nameLinearSlider={"پرتخفیف ترین‌های سایت"} />
       <LinearBanner
         wrapperClassNames="py-3"
         text="جدیدترین خدمات  پردازش تصویر"
@@ -73,8 +73,8 @@ const HomePage = () => {
           }
         ]}
       />
-      <LinearSlider bgClassName="bg-primary2" />
-      <LinearSlider bgClassName=" bg-cyan-600" />
+      <LinearSlider bgClassName="bg-primary2" items={imagesSlider} nameLinearSlider={"پرتخفیف ترین‌های سایت"}/>
+      <LinearSlider bgClassName=" bg-cyan-600" items={imagesSlider} nameLinearSlider={"پرتخفیف ترین‌های سایت"}/>
     </div>
   )
 }

@@ -33,7 +33,10 @@
 // }
 
 .mySwiper-pagination{
-    background: #dc2626;
+    .swiper-wrapper{
+        // padding: 15px;
+        height: unset !important;
+    }
     .swiper-wrapper{
         .swiper-slide{
             // background-color: #dc2626;
