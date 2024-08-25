@@ -8,12 +8,14 @@ import "swiper/css/effect-cards"
 import "./stack-style.scss"
 // import required modules
 import { EffectCards } from "swiper/modules"
+import Image, { StaticImageData } from "next/image"
 
-interface SwiperProps {
-  //   children: ReactNode[]
+type SwiperProps = {
+  otherProp?: string
+  items: { item: StaticImageData; alt: string }[]
 }
 
-const StackSlider: React.FC<SwiperProps> = () => {
+const StackSlider: React.FC<SwiperProps> = ({ items }: SwiperProps) => {
   return (
     <Swiper
       effect={"cards"}
@@ -21,15 +23,13 @@ const StackSlider: React.FC<SwiperProps> = () => {
       modules={[EffectCards]}
       className="mySwiper"
     >
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      <SwiperSlide>Slide 5</SwiperSlide>
-      <SwiperSlide>Slide 6</SwiperSlide>
-      <SwiperSlide>Slide 7</SwiperSlide>
-      <SwiperSlide>Slide 8</SwiperSlide>
-      <SwiperSlide>Slide 9</SwiperSlide>
+      {items.map((item, index) => {
+        return (
+          <SwiperSlide key={index}  >
+            <Image className="w-full h-full" src={item.item} alt={item.alt} />
+          </SwiperSlide>
+        )
+      })}
     </Swiper>
   )
 }
