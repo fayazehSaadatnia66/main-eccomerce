@@ -7,7 +7,7 @@ export default function LoginRegisterButton() {
     <Button
       startIcon={<SlLogin className="transform rotate-180" />}
       //   size="lg"
-      className="h-[40px] w-[134px]"
+      className="h-[40px] w-[134px] "
       variant="outline"
     >
       ورود | ثبت‌نام

@@ -15,36 +15,36 @@ import {
 import { cn } from "@/lib/utils"
 import { FaLockOpen } from "react-icons/fa"
 import { IoReorderFourOutline } from "react-icons/io5"
-import "./style.css"
+import "./style.scss"
 import { ListItem } from "./list-item"
 import { navItems } from "./items"
 import { Separator } from "@/components/ui/separator"
 
 const MainNavigationMenu = () => {
   return (
-    <div className="w-full border-b border-gray-200">
-      <NavigationMenu className="w-full " dir="rtl">
-        <NavigationMenuList>
+    <div className="w-full border-gray-200">
+      <NavigationMenu className="w-full " dir="rtl" >
+        <NavigationMenuList >
           {navItems.map(({ name, icon: Icon, children }, index) => (
             <NavigationMenuItem key={name}>
-              <NavigationMenuTrigger>
+              <NavigationMenuTrigger style={{backgroundColor:"unset !important", color:"white" }}>
                 <div
                   className={cn(
                     "flex justify-center",
-                    index !== 0 ? "text-gray-500" : ""
+                    index !== 0 ? "text-gray-300" : ""
                   )}
                 >
                   <Icon className="me-2" size={20} />
                   {name}
-                  {index === 0 && (
+                  {/* {index === 0 && (
                     <Separator
                       className="ms-2 h-5 bg-gray-300"
                       orientation="vertical"
                     />
-                  )}
+                  )} */}
                 </div>
               </NavigationMenuTrigger>
-              <NavigationMenuContent>
+              <NavigationMenuContent >
                 <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                   {/* <li className="row-span-3">
                     <NavigationMenuLink asChild>
@@ -67,6 +67,7 @@ const MainNavigationMenu = () => {
                   </li> */}
                   {children.map((childItem, index) => (
                     <ListItem
+                    style={{backgroundColor:"none !important"}}
                       key={childItem.name + index}
                       href={childItem.href}
                       title={childItem.name}

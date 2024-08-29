@@ -5,7 +5,7 @@ import logo from "/public/images/logo.png"
 export const MainLogo = () => {
   return (
     <div>
-      <Image width={150} alt="code market" src={logo} />
+      <Image style={{color:"red"}} width={150} alt="code market" src={logo} className="text-red"/>
     </div>
   )
 }

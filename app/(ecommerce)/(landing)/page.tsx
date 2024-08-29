@@ -18,16 +18,16 @@ import code5 from "@/public/images/code5.jpeg"
 import code6 from "@/public/images/code6.jpeg"
 import code7 from "@/public/images/code7.jpeg"
 import StackSlider from "@/components/sliders/stack-slider"
-import WaveCard from "@/components/card/wave-card"
-import { FaAngular, FaHtml5, FaJs, FaReact, FaVuejs } from "react-icons/fa"
-import LinearSlider from "@/components/sliders/linear-slider"
 
-const icons = [
-  { name: "هوش مصنوعی", icon: brain },
-  { name: "اسکریپت", icon: script },
-  { name: "قالب Html", icon: themeHtml },
-  { name: "قالب", icon: world }
-]
+import LinearSlider from "@/components/sliders/linear-slider"
+import CategorySlider from "@/components/sliders/category-slider"
+
+// const icons = [
+//   { name: "هوش مصنوعی", icon: brain },
+//   { name: "اسکریپت", icon: script },
+//   { name: "قالب Html", icon: themeHtml },
+//   { name: "قالب", icon: world },
+// ]
 const imagesSlider = [
   { item: code1, alt: "image1" },
   { item: code2, alt: "image2" },
@@ -35,42 +35,35 @@ const imagesSlider = [
   { item: code4, alt: "image4" },
   { item: code5, alt: "image5" },
   { item: code6, alt: "image6" },
-  { item: code7, alt: "image7" }
+  { item: code7, alt: "image7" },
 ]
 const item = {
   top: { src: accountabilityProduct, alt: "عکس بالا" },
   bottom: { src: phpProduct, alt: "عکس پایین" },
-  left: { src: programProduct, alt: "عکس چپ" }
+  left: { src: programProduct, alt: "عکس چپ" },
 }
 const pages = [
   <div className="p-4 bg-blue-100">صفحه 1</div>,
   <div className="p-4 bg-green-100">صفحه 2</div>,
-  <div className="p-4 bg-red-100">صفحه 3</div>
+  <div className="p-4 bg-red-100">صفحه 3</div>,
 ]
 const HomePage = () => {
   return (
     <div className="w-full flex flex-col gap-5 py-4 justify-center">
-      <TripleBanner item={item} />
+      {/* <TripleBanner item={item} /> */}
       {/* <div className="flex items-center justify-center">
         <ThreeCarousel images={images} />
       </div> */}
       {/* <TripleSlider /> */}
-      <div className="flex w-full gap-5 justify-center">
-        <WaveCard color="purple" icon={FaReact} title="REACT" />
-        <WaveCard color="red" icon={FaAngular} title="انگولار" />
-        <WaveCard color="yellow" icon={FaJs} title="جاوا اسکریپت" />
-        <WaveCard color="blue" icon={FaReact} title="TS" />
-        <WaveCard color="green" icon={FaVuejs} title="VUE" />
-        <WaveCard color="orange" icon={FaHtml5} title="HTML" />
-      </div>
-
-      <StackSlider items={imagesSlider} />
-      <CircleItems icons={icons} />
+      <CategorySlider />
       <LinearSlider
         bgClassName=" bg-red-600"
         items={imagesSlider}
         nameLinearSlider={"پرتخفیف ترین‌های سایت"}
       />
+      <StackSlider items={imagesSlider} />
+      {/* <CircleItems icons={icons} /> */}
+ 
       <LinearBanner
         wrapperClassNames="py-3"
         text="جدیدترین خدمات  پردازش تصویر"
@@ -79,12 +72,12 @@ const HomePage = () => {
         items={[
           {
             src: "https://dkstatics-public.digikala.com/digikala-adservice-banners/f7f82d26ebd20279437a09594726ded3a112cf97_1722759656.gif?x-oss-process=image?x-oss-process=image/format,webp",
-            alt: "react"
+            alt: "react",
           },
           {
             src: "https://dkstatics-public.digikala.com/digikala-adservice-banners/1d37766bef252af69b1682d889b2df7823870097_1722434664.jpg?x-oss-process=image/quality,q_95/format,webp",
-            alt: "xxx"
-          }
+            alt: "xxx",
+          },
         ]}
       />
       <LinearSlider

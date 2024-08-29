@@ -1,3 +1,4 @@
+import { ColorWheelIcon } from "@radix-ui/react-icons"
 import {
   IoCodeSlashOutline,
   IoLogoJavascript,
@@ -37,7 +38,7 @@ export const navItems = [
         name: "خدمات هوش مصنوعی",
         icon: IoCodeSlashOutline, // آیکون PHP
         description: "مجموع خدمات مورد نیاز در حوزه پردازش تصویر با هوش مصنوعی",
-        href: "/php-scripts"
+        href: "/php-scripts",
       }
     ]
   },

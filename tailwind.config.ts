@@ -75,7 +75,15 @@ const config = {
       }
     }
   },
-  plugins: [require("tailwindcss-animate")]
+  plugins: [require("tailwindcss-animate"),
+  function ({ addComponents }:{addComponents: (components: any) => void}) {
+    addComponents({
+      '.main-header': {
+        padding: '0',
+      },
+    });
+  },
+]
 } satisfies Config
 
 export default config
