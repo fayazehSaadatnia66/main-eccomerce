@@ -1,4 +1,11 @@
 .main-header{
-    background-image: url('../../public/images/background2.jpg') !important ;
+    background-image: url('../../public/images/background.svg') !important ;
+    background-size: cover; /* یا 'contain' با توجه به نیازتان */
+    background-position: bottom; /* تنظیم موقعیت به پایین */
 
+    .svg {
+        width: 100%; /* عرض SVG را به اندازه کل بخش تنظیم کنید */
+        height: auto; /* ارتفاع به طور خودکار تنظیم می‌شود */
+
+      }
 }

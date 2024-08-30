@@ -5,37 +5,63 @@ import LoginRegisterButton from "@/components/layout/header/login-register-butto
 import { ShoppingCartButton } from "@/components/layout/header/shopping-cart-button"
 import { Separator } from "@/components/ui/separator"
 import "./style.scss"
+import { Button } from "@/components/ui/button"
 const ECommerceLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="container">
-      <div className="main-header relative px-4 py-[20px] flex items-start justify-between h-[400px] w-full  bg-cover bg-center  mb-6">
-        <div className="absolute flex bottom-0 left-0 w-full overflow-hidden leading-none">
-          {/* <svg className=" w-0 h-24 text-white transform scale-x-[-1]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400">
+      <div className="main-header relative px-4 py-[20px] flex flex-col items-start justify-between h-[400px] w-full  bg-cover bg-center  mb-6">
+        {/* <div className="absolute flex bottom-0 left-0 w-full overflow-hidden leading-none h-[100px]"> */}
+        {/* <svg className=" w-0 h-24 text-white transform scale-x-[-1]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400">
             <path fill="currentColor" d="M0,192L60,165.3C120,139,240,85,360,85.3C480,85,600,139,720,160C840,181,960,171,1080,138.7C1200,107,1320,53,1380,26.7L1440,0V320H0Z"></path>
         </svg> */}
-          <svg
-            className="block w-full h-24 text-white"
+        {/* <svg
+            className="block w-full h-full text-white"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="200 0 2500 180 "
+            viewBox="0 0 1600 220" // تغییر عرض viewBox
           >
             <path
               fill="currentColor"
               d="M0,192L60,165.3C120,139,240,85,360,85.3C480,85,600,139,720,160C840,181,960,171,1080,138.7C1200,107,1320,53,1380,26.7L1440,0V320H0Z"
             ></path>
           </svg>
+        </div> */}
+        <div className="flex items-center justify-between w-full">
+          <div className=" flex items-center gap-2">
+            <MainLogo />
+            <NavigationMenu />
+          </div>
+          <div className="flex items-center h-6 gap-4">
+            <LoginRegisterButton />
+            <Separator orientation="vertical" />
+            <ShoppingCartButton />
+          </div>
         </div>
-
-        <div className=" flex items-center gap-2">
-          <MainLogo />
-          <NavigationMenu />
-        </div>
-        <div className="flex items-center h-6 gap-4">
-          <LoginRegisterButton />
-          <Separator orientation="vertical" />
-          <ShoppingCartButton />
+        <div className="text-3xl font-bold text-white flex flex-col gap-4 items-start justify-center w-full h-full">
+          <div className="flex self-center text-5xl">
+            راهی بهتر برای مدیریت خود
+          </div>
+          <div className="flex self-center text-slate-400 text-xl font-normal">
+            مرجع بزرگ طراحان، وبمستران و توسعه دهندگان ایرانی
+          </div>
+          <div className="flex self-center">
+            <SearchBar />
+          </div>
+          <div className="flex self-center gap-3">
+            <Button className="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-4 py-2 rounded">
+              پرفروش ترین
+            </Button>
+            <Button className="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-4 py-2 rounded">
+              جدیدترین
+            </Button>
+            <Button className="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-4 py-2 rounded">
+              ارزان ترین
+            </Button>
+            <Button className="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-4 py-2 rounded">
+              گران ترین
+            </Button>
+          </div>
         </div>
       </div>
-      <SearchBar />
       {children}
     </div>
   )

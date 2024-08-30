@@ -20,7 +20,7 @@ type WaveCardProps = {
 const WaveCard = ({ color, title, icon: Icon }: WaveCardProps) => {
   return (
     <div
-      className={cn("wave-card fast-playing  text-center", color || "purple")}
+      className={cn("wave-card fast-playing  text-center  ", color || "purple")}
     >
       <div className="image"></div>
 
@@ -31,7 +31,7 @@ const WaveCard = ({ color, title, icon: Icon }: WaveCardProps) => {
       <div className="w-full h-full position-absolute justify-around flex py-8 flex-col items-center">
         {/* <FaAngular className="w-20 h-20 z-10" /> */}
         {Icon && <Icon className="w-20 h-20 z-10" />}
-        <h5 className="font-medium text-3xl z-10">{title}</h5>
+        <h5 className="font-medium text-lg z-10">{title}</h5>
       </div>
     </div>
   )

@@ -49,25 +49,22 @@ const pages = [
 ]
 const HomePage = () => {
   return (
-    <div className="w-full flex flex-col gap-5 py-4 justify-center">
+    <div className="w-full flex flex-col gap-10 py-4 justify-center">
       {/* <TripleBanner item={item} /> */}
       {/* <div className="flex items-center justify-center">
         <ThreeCarousel images={images} />
       </div> */}
       {/* <TripleSlider /> */}
       <CategorySlider />
+      <LinearBanner wrapperClassNames="py-3" text="شگفت انگیزترین قالب ها" />
+      <StackSlider items={imagesSlider} />
       <LinearSlider
         bgClassName=" bg-red-600"
         items={imagesSlider}
         nameLinearSlider={"پرتخفیف ترین‌های سایت"}
       />
-      <StackSlider items={imagesSlider} />
       {/* <CircleItems icons={icons} /> */}
- 
-      <LinearBanner
-        wrapperClassNames="py-3"
-        text="جدیدترین خدمات  پردازش تصویر"
-      />
+
       <MultipleCardsBanner
         items={[
           {
