@@ -12,9 +12,9 @@ const CategorySlider = () => {
           محصولات بر اساس دسته بندی
         </h4>
       </div>
-      <div className="flex justify-center mb-5">
+      {/* <div className="flex justify-center mb-5">
         <CustomIcon />
-      </div>
+      </div> */}
 
       <div className="flex w-full gap-5 justify-center">
         <WaveCard  color="purple" icon={FaReact} title="REACT" />

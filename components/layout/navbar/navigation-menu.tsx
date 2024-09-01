@@ -22,7 +22,7 @@ import { Separator } from "@/components/ui/separator"
 
 const MainNavigationMenu = () => {
   return (
-    <div className="w-full border-gray-200">
+    <div className=" border-gray-200">
       <NavigationMenu className="w-full " dir="rtl" >
         <NavigationMenuList >
           {navItems.map(({ name, icon: Icon, children }, index) => (

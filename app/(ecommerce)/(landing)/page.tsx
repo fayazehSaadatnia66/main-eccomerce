@@ -56,13 +56,13 @@ const HomePage = () => {
       </div> */}
       {/* <TripleSlider /> */}
       <CategorySlider />
+      <LinearSlider
+        // bgClassName=" bg-"
+        items={imagesSlider}
+        nameLinearSlider={"فروش ترین‌های سایت"}
+      />
       <LinearBanner wrapperClassNames="py-3" text="شگفت انگیزترین قالب ها" />
       <StackSlider items={imagesSlider} />
-      <LinearSlider
-        bgClassName=" bg-red-600"
-        items={imagesSlider}
-        nameLinearSlider={"پرتخفیف ترین‌های سایت"}
-      />
       {/* <CircleItems icons={icons} /> */}
 
       <MultipleCardsBanner

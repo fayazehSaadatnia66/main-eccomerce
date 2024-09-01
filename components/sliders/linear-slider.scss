@@ -36,11 +36,14 @@
     .swiper-wrapper{
         // padding: 15px;
         height: unset !important;
+        .swiper-slider{
+            height: 321px !important;
+        }
     }
     .swiper-wrapper{
         .swiper-slide{
             // background-color: #dc2626;
-            margin-left: 20px !important;
+            margin-left: 10px !important;
             width: 200px !important;
             }
     }
