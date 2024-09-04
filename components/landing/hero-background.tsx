@@ -8,10 +8,10 @@ export function HeroBackground() {
       src={img}
       // placeholder="blur"
       quality={50}
-      // fill
-      // sizes="100vw"
-      width={100}
-      height={100}
+      fill
+      sizes="100vw"
+      // width={100}
+      // height={100}
       style={{
         objectFit: "cover",
       }}

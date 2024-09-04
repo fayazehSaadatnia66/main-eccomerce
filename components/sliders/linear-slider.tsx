@@ -22,6 +22,7 @@ import { PiArrowCircleLeftLight } from "react-icons/pi"
 import { Card, CardContent, CardFooter, CardHeader } from "../ui/card"
 import { Button } from "../ui/button"
 import star from "@/public/images/best-seller-star.svg"
+import star1 from "@/public/images/star.png"
 
 type SwiperProps = {
   otherProp?: string
@@ -36,14 +37,14 @@ const LinearSlider: React.FC<SwiperProps> = ({
   nameLinearSlider,
 }) => {
   return (
-    <div className="w-full flex h-[400px] overflow-hidden items-center rounded-2xl bg-red-600">
+    <div className="w-full flex h-[470px] overflow-hidden items-center rounded-2xl bg-red-600">
       <div
         className={cn(
-          "border-y-1 border-indigo-600 flex-col content-center min-w-36 px-3 py-1 text-3xl text-center cursor-pointer text-white  mb-5",
+          " border-y-1 border-indigo-600 flex-col content-center min-w-36 px-3 py-1 text-3xl text-center cursor-pointer text-white  mb-5",
           bgClassName
         )}
       >
-        <div className="w-36 h-44 flex items-center justify-center text-4xl ">
+        <div className="relative top-9 w-36 h-35 flex items-center justify-center text-4xl mb-2">
         {nameLinearSlider}
         </div>
         <br />
@@ -83,34 +84,39 @@ const LinearSlider: React.FC<SwiperProps> = ({
         }}
         modules={[Pagination]}
         className={cn(
-          "mySwiper-pagination float-end flex-auto w-64 content-center",
+          "mySwiper-pagination float-end flex-auto w-64 content-center relative bottom-[64px]",
           bgClassName
         )}
         style={{ width: "1000px !important" }}
       >
         {items?.map((item) => (
-          <SwiperSlide className="swiper-slider w-full border-slate-950 rounded-2xl overflow-hidden h-[256px]">
-            <Card className="flex-col gap-2 h-[322px] w-[350px]">
-              <CardContent className="p-0 mb-14">
+          <SwiperSlide className="swiper-slider w-full border-slate-950 rounded-2xl overflow-hidden h-[500px]">
+            <Card className="flex-col gap-2 h-[470px] w-[350px]">
+              <CardContent className="p-0">
                 <Image
                   width={200}
                   height={0}
-                  className=" w-[280px] h-[180px] rounded-2xl border-1  border-slate-950"
+                  className="rounded-br-lg w-[300px] h-[250px]  border-1  border-slate-950 mb-4"
                   src={item.item.src}
                   alt={item.alt}
                 />
                 <div className="flex-col ">
                   <div className="text-lg text-gray-700">قالب فروشگاهی ایکس پرو</div>
-                  <div className="flex">
+                  <div className="flex mb-5">
                     <div className="text-sm text-slate-400">کاربرد:</div>
                     <div className="text-sm text-gray-700">قالب شرکتی</div>
                   </div>
+                  <hr/>
+                  <div className="flex items-center">
+                  <div className="flex w-[155px] justify-between">
+                    <div className="text-lg">329 فروش</div>
+                    <div className="flex text-lg me-1">4.7 <Image src={star1} alt="star" style={{height:"20px !important", width:"20px", marginRight:"10px"}}/></div>
+                  </div>
+                  <div style={{borderLeft:"1px solid #000", height:"55px", width:"0px"}}></div>
+                  <div className="text-lg ms-3">610,000 تومان</div>
+                  </div>
                 </div>
               </CardContent>
-              <CardFooter className="flex justify-between">
-                <Button variant="outline">Cancel</Button>
-                <Button>Deploy</Button>
-              </CardFooter>
             </Card>
           </SwiperSlide>
         ))}
