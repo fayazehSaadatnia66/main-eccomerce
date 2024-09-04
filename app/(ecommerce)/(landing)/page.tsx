@@ -20,7 +20,7 @@ import code7 from "@/public/images/code7.jpeg"
 import StackSlider from "@/components/sliders/stack-slider"
 
 import LinearSlider from "@/components/sliders/linear-slider"
-import CategorySlider from "@/components/sliders/category-slider"
+import ProductCategoryList from "@/components/landing/product-category-list"
 
 // const icons = [
 //   { name: "هوش مصنوعی", icon: brain },
@@ -50,21 +50,13 @@ const pages = [
 const HomePage = () => {
   return (
     <div className="w-full flex flex-col gap-10 py-4 justify-center">
-      {/* <TripleBanner item={item} /> */}
-      {/* <div className="flex items-center justify-center">
-        <ThreeCarousel images={images} />
-      </div> */}
-      {/* <TripleSlider /> */}
-      <CategorySlider />
+      <ProductCategoryList />
       <LinearSlider
-        // bgClassName=" bg-"
         items={imagesSlider}
         nameLinearSlider={"فروش ترین‌های سایت"}
       />
       <LinearBanner wrapperClassNames="py-3" text="شگفت انگیزترین قالب ها" />
       <StackSlider items={imagesSlider} />
-      {/* <CircleItems icons={icons} /> */}
-
       <MultipleCardsBanner
         items={[
           {

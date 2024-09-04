@@ -4,21 +4,22 @@
   box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
   position: relative;
   width: 120px;
+  cursor: pointer;
   height: 158px;
   border-radius: 16px;
   overflow: hidden;
   color: white;
-  &.red {
-    color: #030201;
-  }
+  // &.red {
+  //   color: #030201;
+  // }
 
   .wave {
     position: absolute;
-    width: 540px;
-    height: 700px;
+    width: 350px;
+    height: 400px;
     opacity: 0.6;
     left: 0;
-    top: 0;
+    top: 50;
     margin-left: -50%;
     margin-top: -70%;
   }
@@ -29,7 +30,7 @@
     background: linear-gradient(744deg, #c69262, #e7711d 60%, #eb6200);
   }
   &.yellow .wave {
-    background: linear-gradient(744deg, #464820, #F7E018 60%, #555702);
+    background: linear-gradient(744deg, #464820, #f7e018 60%, #555702);
   }
   &.red .wave {
     background: linear-gradient(744deg, #ff4a40, #8e1111 60%, #df00eb);
@@ -79,28 +80,28 @@
 
 .fast-playing .wave {
   border-radius: 40%;
-  animation: wave 3000ms infinite linear;
+  animation: wave 8000ms infinite linear;
 }
 
 .wave {
   border-radius: 40%;
-  animation: wave 55s infinite linear;
+  animation: wave 20s infinite linear;
 }
 
 .fast-playing .wave:nth-child(2) {
-  animation-duration: 4000ms;
+  animation-duration: 8000ms;
 }
 
 .wave:nth-child(2) {
-  animation-duration: 50s;
+  animation-duration: 20s;
 }
 
 .fast-playing .wave:nth-child(3) {
-  animation-duration: 5000ms;
+  animation-duration: 8000ms;
 }
 
 .wave:nth-child(3) {
-  animation-duration: 45s;
+  animation-duration: 20s;
 }
 
 @keyframes wave {

@@ -5,15 +5,15 @@ import { FaAngular } from "react-icons/fa"
 import { IconType } from "react-icons/lib"
 
 type WaveCardProps = {
-  color:
-    | "red"
-    | "green"
-    | "blue"
-    | "yellow"
-    | "purple"
-    | "black"
-    | "green"
-    | "orange"
+  color:string
+    // | "red"
+    // | "green"
+    // | "blue"
+    // | "yellow"
+    // | "purple"
+    // | "black"
+    // | "green"
+    // | "orange"
   title?: string
   icon?: IconType
 }
