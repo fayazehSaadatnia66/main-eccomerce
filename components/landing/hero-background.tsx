@@ -1,19 +1,23 @@
 import Image from "next/image"
-import img from "/public/images/background.svg"
+import img from "/public/images/hero7.svg"
+import "./hero-background.scss"
 
 export function HeroBackground() {
   return (
     <Image
+      className="xxx absolute"
       alt="Mountains"
       src={img}
       // placeholder="blur"
-      quality={50}
-      // fill
-      // sizes="100vw"
-      width={100}
-      height={100}
+      // quality={100}
+      fill
+      sizes="100vw"
+      // width={100}
+      // height={120}
       style={{
-        objectFit: "cover",
+        objectFit: "cover"
+        // objectPosition: "100px 200px"
+        // height: 1500
       }}
     />
   )

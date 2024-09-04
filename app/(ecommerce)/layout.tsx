@@ -10,7 +10,7 @@ import { HeroBackground } from "@/components/landing/hero-background"
 const ECommerceLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="container">
-      <div className="main-header relative right-[50%] w-[100vw] ms-[-50vw] px-4 py-[20px] flex flex-col items-start justify-between h-[400px] bg-cover bg-center  mb-6">
+      <div className="main-header relative right-[50%] w-[100vw] ms-[-50vw] px-4 flex flex-col items-start justify-between h-[400px] bg-cover bg-center  mb-6">
         <HeroBackground />
         {/* <div className="absolute flex bottom-0 left-0 w-full overflow-hidden leading-none h-[100px]"> */}
         {/* <svg className=" w-0 h-24 text-white transform scale-x-[-1]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400">
