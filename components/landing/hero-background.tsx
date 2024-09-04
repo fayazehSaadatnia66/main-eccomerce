@@ -1,5 +1,5 @@
 import Image from "next/image"
-import img from "/public/images/hero7.svg"
+import img from "/public/images/hero2-a.jpg"
 import "./hero-background.scss"
 
 export function HeroBackground() {
