@@ -5,15 +5,15 @@ import { FaAngular } from "react-icons/fa"
 import { IconType } from "react-icons/lib"
 
 type WaveCardProps = {
-  color:string
-    // | "red"
-    // | "green"
-    // | "blue"
-    // | "yellow"
-    // | "purple"
-    // | "black"
-    // | "green"
-    // | "orange"
+  color: string
+  // | "red"
+  // | "green"
+  // | "blue"
+  // | "yellow"
+  // | "purple"
+  // | "black"
+  // | "green"
+  // | "orange"
   title?: string
   icon?: IconType
 }
@@ -30,7 +30,7 @@ const WaveCard = ({ color, title, icon: Icon }: WaveCardProps) => {
 
       <div className="w-full h-full position-absolute justify-around flex py-8 flex-col items-center">
         {/* <FaAngular className="w-20 h-20 z-10" /> */}
-        {Icon && <Icon className="w-20 h-20 z-10" />}
+        {Icon && <Icon className="w-20 h-20 z-10 icon" />}
         <h5 className="font-medium text-lg z-10">{title}</h5>
       </div>
     </div>
