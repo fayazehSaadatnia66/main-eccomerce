@@ -4,9 +4,9 @@ import Image from "next/image"
 export const ShoppingCartButton = () => {
   return (
     <Image
-    className="filter invert brightness-0"
+    className="filter invert brightness-0 cursor-pointer"
     alt="shopping-cart"
-      width={22}
+      width={30}
       src={shopCart}
     />
   )

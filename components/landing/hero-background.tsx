@@ -5,7 +5,7 @@ import "./hero-background.scss"
 export function HeroBackground() {
   return (
     <Image
-      className="xxx absolute"
+      className="xxx  absolute z-0"
       alt="Mountains"
       src={img}
       // placeholder="blur"

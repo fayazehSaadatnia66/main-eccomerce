@@ -34,23 +34,23 @@ const ECommerceLayout = ({ children }: { children: React.ReactNode }) => {
           <div className=" flex items-center navigate-menu">
             <NavigationMenu />
           </div>
-          <div className="flex items-center h-6 gap-4 me-4">
+          <div className="flex items-center h-6 gap-4 me-4 mt-4">
             <LoginRegisterButton />
-            <Separator orientation="vertical" />
+            <Separator orientation="vertical" className="z-10"/>
             <ShoppingCartButton />
           </div>
         </div>
-        <div className="text-3xl font-bold text-white flex flex-col gap-4 items-start justify-center w-full h-full">
+        <div className="text-3xl font-bold text-white flex flex-col gap-4 items-start justify-center w-full h-full z-10">
           <div className="flex self-center text-5xl">
             راهی بهتر برای مدیریت خود
           </div>
-          <div className="flex self-center text-slate-400 text-xl font-normal">
+          <div className="flex self-center text-slate-200 text-xl font-normal">
             مرجع بزرگ طراحان، وبمستران و توسعه دهندگان ایرانی
           </div>
           <div className="relative flex self-center items-center">
             <SearchBar />
           </div>
-          <div className="flex self-center gap-3">
+          <div className="flex self-center gap-3 ">
             <Button className="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-4 py-2 rounded">
               پرفروش ترین
             </Button>

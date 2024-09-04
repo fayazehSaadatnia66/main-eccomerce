@@ -3,9 +3,9 @@
   background: transparent;
   box-shadow: 0px 8px 28px -9px rgba(0, 0, 0, 0.45);
   position: relative;
-  width: 240px;
+  width: 120px;
   cursor: pointer;
-  height: 270px;
+  height: 120px;
   border-radius: 16px;
   overflow: hidden;
   color: white;
@@ -15,11 +15,11 @@
 
   .wave {
     position: absolute;
-    width: 540px;
-    height: 700px;
+    width: 400px;
+    height: 300px;
     opacity: 0.6;
     left: 0;
-    top: 0;
+    top: 50;
     margin-left: -50%;
     margin-top: -70%;
   }
@@ -73,7 +73,9 @@
 //   text-transform: lowercase;
 // }
 
-.wave:nth-child(2),
+.wave:nth-child(2){
+  top: 190px;
+}
 .wave:nth-child(3) {
   top: 210px;
 }

@@ -1,12 +1,5 @@
 import { LinearBanner } from "@/components/banner/linear-banner"
 import { MultipleCardsBanner } from "@/components/banner/multiple-card-banner"
-// import { LinearSlider } from "@/components/sliders/linear-slider"
-import { TripleBanner } from "@/components/sliders/triple-banner"
-import CircleItems from "@/components/sliders/circle-items"
-import brain from "@/public/images/brain.jpeg"
-import script from "@/public/images/script.png"
-import themeHtml from "@/public/images/theme html.png"
-import world from "@/public/images/wrold.png"
 import accountabilityProduct from "@/public/images/accountability.jpeg"
 import phpProduct from "@/public/images/php.png"
 import programProduct from "@/public/images/Programming.jpeg"
@@ -18,16 +11,10 @@ import code5 from "@/public/images/code5.jpeg"
 import code6 from "@/public/images/code6.jpeg"
 import code7 from "@/public/images/code7.jpeg"
 import StackSlider from "@/components/sliders/stack-slider"
-
+import star from "@/public/images/best-seller-star.svg"
 import LinearSlider from "@/components/sliders/linear-slider"
 import ProductCategoryList from "@/components/landing/product-category-list"
 
-// const icons = [
-//   { name: "هوش مصنوعی", icon: brain },
-//   { name: "اسکریپت", icon: script },
-//   { name: "قالب Html", icon: themeHtml },
-//   { name: "قالب", icon: world },
-// ]
 const imagesSlider = [
   { item: code1, alt: "image1" },
   { item: code2, alt: "image2" },
@@ -53,7 +40,8 @@ const HomePage = () => {
       <ProductCategoryList />
       <LinearSlider
         items={imagesSlider}
-        nameLinearSlider={"فروش ترین‌های سایت"}
+        nameLinearSlider={"پرفروش ترین‌های سایت"}
+        logoLinearSlider={{item:star, alt:"star"}}
       />
       <LinearBanner wrapperClassNames="py-3" text="شگفت انگیزترین قالب ها" />
       <StackSlider items={imagesSlider} />
@@ -68,16 +56,6 @@ const HomePage = () => {
             alt: "xxx",
           },
         ]}
-      />
-      <LinearSlider
-        bgClassName="bg-primary2"
-        items={imagesSlider}
-        nameLinearSlider={"پرتخفیف ترین‌های سایت"}
-      />
-      <LinearSlider
-        bgClassName=" bg-cyan-600"
-        items={imagesSlider}
-        nameLinearSlider={"پرتخفیف ترین‌های سایت"}
       />
     </div>
   )

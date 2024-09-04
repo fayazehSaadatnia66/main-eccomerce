@@ -1,16 +1,17 @@
 import { Button } from "@/components/ui/button"
 import React from "react"
-import { SlLogin } from "react-icons/sl"
+import { HiOutlineLogin } from "react-icons/hi"
 
 export default function LoginRegisterButton() {
   return (
-    <Button
-      startIcon={<SlLogin className="transform rotate-180" color="#581c87" />}
+        <Button
+      startIcon={<HiOutlineLogin size={22} color="#9333ea" />}
       //   size="lg"
-      className="gggggggggggggggggggggg h-[40px] w-[134px] bg-white text-purple-900 "
+      className=" h-[40px] w-[134px] rounded-xl text-purple-600 bg-white z-10"
       variant="outline"
     >
       ورود | ثبت‌نام
     </Button>
+
   )
 }

@@ -14,7 +14,7 @@ const SearchBar = () => {
         className="w-[500px] h-[45px] bg-zinc-100 "
         placeholder="جستجو"
         endIcon={
-          <Button className="bg-purple-800 button-search h-[40px] absolute left-[-9px] bottom-[-21px]">
+          <Button className="custom-search-button bg-purple-800 button-search h-[40px] absolute left-[-9px] bottom-[-21px] hover:bg-purple-600">
             جستجو کنید
           </Button>
         }
