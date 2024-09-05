@@ -2,6 +2,7 @@
 
 import axios from "axios"
 import { RFC7807 } from "./custom-error"
+import { appUrl } from "./utils"
 // type RFC7807Error = {
 //   type: string
 //   title: string
@@ -10,7 +11,7 @@ import { RFC7807 } from "./custom-error"
 //   instance: string
 // }
 const api = axios.create({
-  baseURL: "http://localhost:8086" // Change this to your API's base URL
+  baseURL: appUrl // Change this to your API's base URL
 })
 
 api.interceptors.response.use(

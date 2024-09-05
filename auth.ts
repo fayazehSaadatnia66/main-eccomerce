@@ -1,10 +1,10 @@
-import NextAuth, { AuthError } from "next-auth"
+import NextAuth from "next-auth"
 import Credentials from "next-auth/providers/credentials"
-import { LoginSchema } from "./schemas"
 import google from "next-auth/providers/google"
-import axios from "axios"
 import api from "./lib/axios-config"
 import { CustomError } from "./lib/custom-error"
+import { LoginSchema } from "./schemas"
+import { getUserById } from "./services/user-service"
 
 export const {
   handlers: { GET, POST },
@@ -29,7 +29,7 @@ export const {
           password: password,
           code: code === "undefined" ? null : code
         }
-        const res = await api.post("/api/v1/auth/signin", body).catch((err) => {
+        const res = await api.post("/auth/signin", body).catch((err) => {
           throw new CustomError(err)
         })
 
@@ -83,14 +83,16 @@ export const {
     // token showing in above and showing in the req in middleware
     async jwt({ token }) {
       if (!token.sub) return token
-      const response = await fetch(
-        `http://localhost:8086/api/v1/users/${token.sub}`,
-        {
-          credentials: "include"
-        }
-      )
-      if (!response.ok) return token
-      const existingUser = await response.json()
+      // const response = await fetch(
+      //   `http://localhost:8086/api/v1/users/${token.sub}`,
+      //   {
+      //     credentials: "include"
+      //   }
+      // )
+      // if (!response.ok) return token
+      // const existingUser = await response.json()
+      const existingUser = await getUserById(token.sub)
+      if (!existingUser) return token
       token.roles = existingUser.roles
       return token
     }
