@@ -22,10 +22,8 @@ import { useState, useTransition } from "react"
 import {
   InputOTP,
   InputOTPGroup,
-  InputOTPSeparator,
   InputOTPSlot
 } from "@/components/ui/input-otp"
-import { LoginUser } from "@/actions/auth"
 import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp"
 import { FormWarning } from "../form-warning"
 import { FaSpinner } from "react-icons/fa"

@@ -2,20 +2,10 @@ import React from "react"
 import "./card-inner-circle.scss"
 import { IconType } from "react-icons/lib"
 import { cn } from "@/lib/utils"
+import { Colors } from "@/types"
 
 type Card3Props = {
-  color:
-    | string
-    | "red"
-    | "red-pale"
-    | "green"
-    | "blue"
-    | "yellow"
-    | "yellow-pale"
-    | "purple"
-    | "black"
-    | "green"
-    | "orange"
+  color: Colors
   title?: string
   icon?: IconType
 }

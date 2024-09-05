@@ -1,7 +1,7 @@
 // utils/axiosConfig.js
 
 import axios from "axios"
-import { RFC7807 } from "./CustomError"
+import { RFC7807 } from "./custom-error"
 // type RFC7807Error = {
 //   type: string
 //   title: string

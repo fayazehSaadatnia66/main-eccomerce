@@ -1,9 +1,10 @@
-import WaveCard from "@/components/card/wave-card"
+import WaveCard from "@/components/card/card-wave"
 import { FaAngular, FaHtml5, FaJs, FaReact, FaVuejs } from "react-icons/fa"
 import { BiLogoTypescript } from "react-icons/bi"
-import Card1 from "../card/card1"
-import Card2 from "../card/card2"
+import CardStaticColoredBorder from "../card/card-static-colored-border"
+import CardRotaryColoredBorder from "../card/card-rotary-colored-border"
 import CardInnerCircle from "../card/card-inner-circle"
+import { Colors } from "@/types"
 const infoCards = [
   { color: "purple", icon: FaReact, title: "REACT" },
   { color: "red", icon: FaAngular, title: "انگولار" },
@@ -25,19 +26,33 @@ const ProductCategoryList = () => {
       </div>
       <div className="flex w-full gap-5 justify-center">
         {infoCards.map((card) => (
-          <Card1 color={card.color} icon={card.icon} title={card.title} />
+          <CardStaticColoredBorder
+            key={card.title}
+            color={card.color as Colors}
+            icon={card.icon}
+            title={card.title}
+            iconSize={55}
+            width={140}
+            wrapperClassName="bg-"
+          />
           // <WaveCard color={card.color} icon={card.icon} title={card.title} />
         ))}
       </div>
       <div className="flex mt-20 w-full gap-5 justify-center">
         {infoCards.map((card) => (
-          <Card2 color={card.color} icon={card.icon} title={card.title} />
+          <CardRotaryColoredBorder
+            key={card.title}
+            color={card.color as Colors}
+            icon={card.icon}
+            title={card.title}
+          />
         ))}
       </div>
       <div className="flex mt-20 w-full gap-5 justify-center">
         {infoCards.map((card) => (
           <CardInnerCircle
-            color={card.color}
+            key={card.title}
+            color={card.color as Colors}
             icon={card.icon}
             title={card.title}
           />
@@ -46,7 +61,12 @@ const ProductCategoryList = () => {
 
       <div className="flex mt-20 w-full gap-5 justify-center">
         {infoCards.map((card) => (
-          <WaveCard color={card.color} icon={card.icon} title={card.title} />
+          <WaveCard
+            key={card.title}
+            color={card.color as Colors}
+            icon={card.icon}
+            title={card.title}
+          />
         ))}
       </div>
     </div>

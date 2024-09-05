@@ -1,12 +1,12 @@
 import { cn } from "@/lib/utils"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import localFont from "next/font/local"
 import "./globals.css"
 
 const vazir = localFont({
   src: [
     {
-      path: "/ui/fonts/shabnam/Shabnam-Medium-FD.woff2",
+      path: "./../fonts/shabnam/Shabnam-Medium-FD.woff2",
       weight: "400",
       style: "normal"
     }
@@ -24,16 +24,23 @@ export const metadata: Metadata = {
   generator: "Next.js",
   manifest: "/manifest.json",
   keywords: ["nextjs", "next14", "pwa", "next-pwa"],
-  themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#fff" }],
   authors: [
     {
       name: "imvinojanv",
       url: "https://www.linkedin.com/in/imvinojanv/"
     }
-  ],
-  viewport:
-    "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
+  ]
 }
+
+export const viewport: Viewport = {
+  themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#fff" }],
+  minimumScale: 1,
+  initialScale: 1,
+  width: "deviceWidth",
+  viewportFit: "cover"
+  // shrinkToFit: "no"
+}
+
 export default function RootLayout({
   children
 }: Readonly<{

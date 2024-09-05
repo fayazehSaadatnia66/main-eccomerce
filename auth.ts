@@ -3,8 +3,8 @@ import Credentials from "next-auth/providers/credentials"
 import { LoginSchema } from "./schemas"
 import google from "next-auth/providers/google"
 import axios from "axios"
-import api from "./utils/axiosConfig"
-import { CustomError } from "./utils/CustomError"
+import api from "./lib/axios-config"
+import { CustomError } from "./lib/custom-error"
 
 export const {
   handlers: { GET, POST },
@@ -32,20 +32,6 @@ export const {
         const res = await api.post("/api/v1/auth/signin", body).catch((err) => {
           throw new CustomError(err)
         })
-        // const response = await fetch(
-        //   "http://localhost:8086/api/v1/auth/signin",
-        //   {
-        //     method: "POST",
-        //     body: JSON.stringify(body),
-        //     redirect: "follow",
-        //     headers: {
-        //       "Content-Type": "application/json"
-        //     }
-        //   }
-        // )
-        // if (!response.ok) return null
-        // const res = await response.json()
-        console.log(res)
 
         return {
           email: res.data.userData.email,

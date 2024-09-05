@@ -1,19 +1,11 @@
 import React from "react"
-import "./wave-card.scss"
 import { cn } from "@/lib/utils"
-import { FaAngular } from "react-icons/fa"
 import { IconType } from "react-icons/lib"
+import "./card-wave.scss"
+import { Colors } from "@/types"
 
 type WaveCardProps = {
-  color: string
-  // | "red"
-  // | "green"
-  // | "blue"
-  // | "yellow"
-  // | "purple"
-  // | "black"
-  // | "green"
-  // | "orange"
+  color: Colors
   title?: string
   icon?: IconType
 }

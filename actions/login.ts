@@ -1,8 +1,8 @@
 "use server"
 import { signIn } from "@/auth"
+import { CustomError } from "@/lib/custom-error"
 import { DEFAULT_LOGIN_REDIRECT } from "@/routes"
 import { LoginSchema } from "@/schemas"
-import { CustomError } from "@/utils/CustomError"
 import { AuthError } from "next-auth"
 import { isRedirectError } from "next/dist/client/components/redirect"
 import * as z from "zod"
@@ -20,7 +20,6 @@ export const login = async (
     return { message: "فیلد های ورودی نامعتبر است", type: "error" }
 
   const { screenName, password, code } = validateFields.data
-  const email = screenName
 
   try {
     await signIn("credentials", {

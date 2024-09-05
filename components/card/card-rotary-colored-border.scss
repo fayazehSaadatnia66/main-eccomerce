@@ -84,6 +84,9 @@
 .card2:hover .glass {
   opacity: 0;
 }
+.card2 svg {
+  color: var(--card2-bg);
+}
 
 .glass {
   position: absolute;

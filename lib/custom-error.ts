@@ -1,5 +1,3 @@
-// utils/CustomError.ts
-
 export interface RFC7807 {
   type: string
   title: string

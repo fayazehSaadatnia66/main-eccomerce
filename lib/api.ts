@@ -1,5 +1,4 @@
 import axios from "axios"
-import { headers } from "next/headers"
 
 export const generateTwoFactorToken = async (email: string) => {
   await axios.post(
@@ -15,9 +14,8 @@ export const existingUser = async (userId: string) => {
   await axios.get(`http://localhost:8086/api/v1/users/${userId}`)
 }
 export const checkTwoFactorCode = async (email: string, code: string) => {
- const response = await axios
-    .get(
-      `http://localhost:8086/api/v1/auth/two-factor/token-by-email/${email}/${code}`
-    )
-    return response.data
+  const response = await axios.get(
+    `http://localhost:8086/api/v1/auth/two-factor/token-by-email/${email}/${code}`
+  )
+  return response.data
 }

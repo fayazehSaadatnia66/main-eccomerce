@@ -1,23 +1,19 @@
 import React from "react"
-import "./card2.scss"
 import { IconType } from "react-icons/lib"
 import { cn } from "@/lib/utils"
+import "./card-rotary-colored-border.scss"
+import { Colors } from "@/types"
 
-type Card2Props = {
-  color:
-    | string
-    | "red"
-    | "green"
-    | "blue"
-    | "yellow"
-    | "purple"
-    | "black"
-    | "green"
-    | "orange"
+type CardRotaryColoredBorderProps = {
+  color: Colors
   title?: string
   icon?: IconType
 }
-const Card2 = ({ color, title, icon: Icon }: Card2Props) => {
+const CardRotaryColoredBorder = ({
+  color,
+  title,
+  icon: Icon
+}: CardRotaryColoredBorderProps) => {
   return (
     <div className={cn("card2", color)}>
       <span className="glass"></span>
@@ -29,4 +25,4 @@ const Card2 = ({ color, title, icon: Icon }: Card2Props) => {
   )
 }
 
-export default Card2
+export default CardRotaryColoredBorder
