@@ -4,12 +4,12 @@ import { IconType } from "react-icons/lib"
 import { cn } from "@/lib/utils"
 import { Colors } from "@/types"
 
-type Card3Props = {
+type CardInnerCircleProps = {
   color: Colors
   title?: string
   icon?: IconType
 }
-const CardInnerCircle = ({ color, title, icon: Icon }: Card3Props) => {
+const CardInnerCircle = ({ color, title, icon: Icon }: CardInnerCircleProps) => {
   return (
     <div
       className={cn("card-inner-circle shadow-lg colorfull", color || "yellow")}

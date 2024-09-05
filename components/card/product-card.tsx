@@ -33,7 +33,7 @@ const ProductCard = ({
         // sizes="100vw"
         style={{
           width: "100%",
-          height: "auto",
+          height: "100%",
           objectFit: "cover"
           // objectPosition: "center",
           // height: "auto",
@@ -56,9 +56,9 @@ const ProductCard = ({
         </div>
         <hr />
         <div className="flex items-center">
-          <div className="flex w-[155px] justify-between">
-            <div className="text-lg  text-gray-600">{numberSales} فروش</div>
-            <div className="flex text-lg me-1  text-gray-600">
+          <div className="flex w-[125px] justify-between">
+            <div className="text-sm  text-gray-600">{numberSales} فروش</div>
+            <div className="flex text-sm  me-1  text-gray-600">
               {score}
               <Image
                 src={star}
@@ -78,7 +78,7 @@ const ProductCard = ({
               width: "0px"
             }}
           ></div>
-          <div className="text-lg ms-3  text-gray-600">{price} تومان</div>
+          <div className="text-sm ms-1 text-gray-600">{price} تومان</div>
         </div>
       </div>
       {/* </CardContent> */}

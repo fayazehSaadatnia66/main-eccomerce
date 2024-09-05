@@ -8,17 +8,26 @@ type CardRotaryColoredBorderProps = {
   color: Colors
   title?: string
   icon?: IconType
+  iconSize?: number
+  width?: number
+  wrapperClassName?: string
 }
 const CardRotaryColoredBorder = ({
   color,
   title,
-  icon: Icon
+  icon: Icon,
+  width,
+  iconSize,
+  wrapperClassName,
 }: CardRotaryColoredBorderProps) => {
   return (
-    <div className={cn("card2", color)}>
+    <div
+      className={cn("card2", color, wrapperClassName)}
+      style={{ width: width || 190 }}
+    >
       <span className="glass"></span>
       <div className="content flex flex-col justify-between gap-5">
-        {Icon && <Icon className="w-20 h-20 z-10" />}
+        {Icon && <Icon size={iconSize || 55} />}
         <span>{title}</span>
       </div>
     </div>

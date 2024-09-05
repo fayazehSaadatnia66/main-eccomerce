@@ -1,6 +1,6 @@
 .card2 {
-  width: 190px;
-  height: 190px;
+  // width: 140px;
+  aspect-ratio: 1 / 0.97;
   background: #171717;
   display: flex;
   justify-content: center;
@@ -16,8 +16,8 @@
   border-radius: 10px;
   // background: var(--card2-bg);
   background: #171717;
-  width: 182px;
-  height: 182px;
+  width: 132px;
+  height: 132px;
   z-index: 1;
   padding: 20px;
   color: white;
@@ -35,8 +35,8 @@
   content: " ";
   display: block;
   background: #fff5;
-  width: 50px;
-  height: 50px;
+  width: 90px;
+  height: 90px;
   position: absolute;
   filter: blur(50px);
 }
@@ -50,8 +50,8 @@
   content: "";
   position: absolute;
   display: block;
-  width: 120px;
-  height: 300px;
+  width: 70px;
+  height: 250px;
   transform: rotate(0deg) translateY(50%);
   background: linear-gradient(90deg, #ff2288, transparent);
   transition: opacity 300ms;
@@ -63,8 +63,8 @@
   content: "";
   position: absolute;
   display: block;
-  width: 120px;
-  height: 300px;
+  width: 70px;
+  height: 250px;
   transform: rotate(0deg) translateY(-50%);
   background: linear-gradient(90deg, transparent, #2268ff);
   transition: opacity 300ms;
@@ -92,8 +92,8 @@
   position: absolute;
   content: "";
   display: block;
-  width: 190px;
-  height: 182px;
+  width: 140px;
+  height: 132px;
   // background: #17171733;
   backdrop-filter: blur(50px);
   z-index: 1;

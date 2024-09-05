@@ -40,8 +40,9 @@ const HomePage = () => {
       <ProductCategoryList />
       <LinearSlider
         items={imagesSlider}
-        nameLinearSlider={"پرفروش ترین‌های سایت"}
-        logoLinearSlider={{item:star, alt:"star"}}
+        bgClassName={"bg-purple-800"}
+        name={"پرفروش ترین‌های سایت"}
+        logo={{item:star, alt:"star"}}
       />
       <LinearBanner wrapperClassNames="py-3" text="شگفت انگیزترین قالب ها" />
       <StackSlider items={imagesSlider} />

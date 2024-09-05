@@ -3,51 +3,54 @@ import React from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "./linear-slider.scss"
-import { Pagination } from "swiper/modules"
+import { Navigation, Pagination } from "swiper/modules"
 import Image, { StaticImageData } from "next/image"
 import { MdKeyboardArrowLeft } from "react-icons/md"
 import { ClassNameValue } from "tailwind-merge"
 import { cn } from "@/lib/utils"
 import ProductCard from "../card/product-card"
+import { SlArrowRight } from "react-icons/sl";
+
 
 type SwiperProps = {
   otherProp?: string
   items: { item: StaticImageData; alt: string }[]
   bgClassName?: ClassNameValue
-  nameLinearSlider: string
-  logoLinearSlider: { item: StaticImageData; alt: string }
+  name: string
+  logo: { item: StaticImageData; alt: string }
 }
 
 const LinearSlider: React.FC<SwiperProps> = ({
   items,
   bgClassName,
-  nameLinearSlider,
-  logoLinearSlider
+  name,
+  logo
 }) => {
   return (
     <div
       className={cn(
         "linear-slider w-full flex py-4 px-5 rounded-lg",
-        bgClassName || "bg-[#DB304E]"
+        bgClassName
       )}
     >
       <div
         className={cn(
-          "flex flex-col content-center pe-3 text-3xl text-center text-white"
+          "flex flex-col content-center pe-3 text-3xl text-center text-white gap-6 "
         )}
       >
-        <div className="relative top-9 w-36 h-35 flex items-center justify-center text-4xl mb-2">
-          {nameLinearSlider}
+        <div className="w-36 h-35 flex items-center justify-center text-4xl">
+          {name}
         </div>
-        <br />
-        <div className="flex flex-col items-center  justify-around">
+       
+        <div className="flex flex-col items-center h-48 justify-between">
           <Image
-            src={logoLinearSlider.item.src}
-            alt={logoLinearSlider.alt}
+            src={logo.item.src}
+            alt={logo.alt}
             height={50}
-            width={50}
+            width={90}
+            sizes="3xl"
           />
-          <span className="mt-7 flex text-sm">
+          <span className="flex text-sm">
             مشاهده همه <MdKeyboardArrowLeft size={18} />
           </span>
         </div>
@@ -56,8 +59,10 @@ const LinearSlider: React.FC<SwiperProps> = ({
         // slidesPerView={1}
         spaceBetween={7}
         pagination={{
-          clickable: true
+          clickable: true,
+
         }}
+   
         breakpoints={{
           640: {
             slidesPerView: 2,

@@ -24,7 +24,7 @@ const ProductCategoryList = () => {
           محصولات بر اساس دسته بندی
         </h4>
       </div>
-      <div className="flex w-full gap-5 justify-center">
+      {/* <div className="flex w-full gap-5 justify-center">
         {infoCards.map((card) => (
           <CardStaticColoredBorder
             key={card.title}
@@ -37,7 +37,7 @@ const ProductCategoryList = () => {
           />
           // <WaveCard color={card.color} icon={card.icon} title={card.title} />
         ))}
-      </div>
+      </div> */}
       <div className="flex mt-20 w-full gap-5 justify-center">
         {infoCards.map((card) => (
           <CardRotaryColoredBorder
@@ -45,10 +45,14 @@ const ProductCategoryList = () => {
             color={card.color as Colors}
             icon={card.icon}
             title={card.title}
+            iconSize={55}
+            width={140}
+            // height={140}
+            wrapperClassName="bg-"
           />
         ))}
       </div>
-      <div className="flex mt-20 w-full gap-5 justify-center">
+      {/* <div className="flex mt-20 w-full gap-5 justify-center">
         {infoCards.map((card) => (
           <CardInnerCircle
             key={card.title}
@@ -68,7 +72,7 @@ const ProductCategoryList = () => {
             title={card.title}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   )
 }
