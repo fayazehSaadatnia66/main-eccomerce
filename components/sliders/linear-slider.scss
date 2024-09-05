@@ -1,59 +1,14 @@
-// #app { height: 100% }
-// html,
-// body {
-//   position: relative;
-//   height: 100%;
-// }
-
-// body {
-//   background: #eee;
-//   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-//   font-size: 14px;
-//   color: #000;
-//   margin: 0;
-//   padding: 0;
-// }
-
-// .swiper {
-//   width: 100%;
-//   padding-top: 50px;
-//   padding-bottom: 50px;
-// }
-
-// .swiper-slide {
-//   background-position: center;
-//   background-size: cover;
-//   width: 300px;
-//   height: 300px;
-// }
-
-// .swiper-slide img {
-//   display: block;
-//   width: 100%;
-// }
-
-.mySwiper-pagination{
-    height: unset !important;
-    .swiper-wrapper{
-        // height:"452px !important";
-        .swiper-slider{
-            height: 435px !important;
-            width: 300px;
-        }
+.linear-slider {
+  .swiper-wrapper {
+    border-radius: 25px;
+  }
+  .swiper-slide {
+    border-radius: 3px;
+    &:nth-child(1) {
+      border-radius: 0 15px 15px 0 !important;
     }
-    .swiper-wrapper{
-        .swiper-slide{
-            margin-left: 4px !important;
-            width: 320px !important;
-            &:nth-child(1){
-
-                border-radius: 0 2rem  2rem 0!important;
-            }
-            border-radius: unset !important;
-            }
-            &:last-child{
-
-                border-radius: 0 2rem  2rem 0!important;
-            }
+    &:last-child {
+      border-radius: 15px 0 0 15px !important;
     }
-} 
+  }
+}

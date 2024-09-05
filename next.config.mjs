@@ -9,7 +9,8 @@ const nextConfig = {
   },
   images: {
     remotePatterns: [
-      { protocol: "https", hostname: "dkstatics-public.digikala.com" }
+      { protocol: "https", hostname: "dkstatics-public.digikala.com" },
+      { protocol: "https", hostname: "buffer.com" }
     ]
   }
 }

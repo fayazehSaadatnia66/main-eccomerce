@@ -2,9 +2,8 @@
 import React from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
-import "swiper/css/effect-cards"
 import "./linear-slider.scss"
-import {Pagination } from "swiper/modules"
+import { Pagination } from "swiper/modules"
 import Image, { StaticImageData } from "next/image"
 import { MdKeyboardArrowLeft } from "react-icons/md"
 import { ClassNameValue } from "tailwind-merge"
@@ -23,14 +22,18 @@ const LinearSlider: React.FC<SwiperProps> = ({
   items,
   bgClassName,
   nameLinearSlider,
-  logoLinearSlider,
+  logoLinearSlider
 }) => {
   return (
-    <div className="w-full flex h-[452px] overflow-hidden items-center rounded-2xl bg-red-600">
+    <div
+      className={cn(
+        "linear-slider w-full flex py-4 px-5 rounded-lg",
+        bgClassName || "bg-[#DB304E]"
+      )}
+    >
       <div
         className={cn(
-          " border-y-1 border-indigo-600 flex-col content-center min-w-36 px-3 py-1 text-3xl text-center cursor-pointer text-white  mb-5",
-          bgClassName
+          "flex flex-col content-center pe-3 text-3xl text-center text-white"
         )}
       >
         <div className="relative top-9 w-36 h-35 flex items-center justify-center text-4xl mb-2">
@@ -41,8 +44,8 @@ const LinearSlider: React.FC<SwiperProps> = ({
           <Image
             src={logoLinearSlider.item.src}
             alt={logoLinearSlider.alt}
-            height={150}
-            width={100}
+            height={50}
+            width={50}
           />
           <span className="mt-7 flex text-sm">
             مشاهده همه <MdKeyboardArrowLeft size={18} />
@@ -50,38 +53,33 @@ const LinearSlider: React.FC<SwiperProps> = ({
         </div>
       </div>
       <Swiper
-        slidesPerView={1}
-        spaceBetween={10}
+        // slidesPerView={1}
+        spaceBetween={7}
         pagination={{
-          clickable: true,
+          clickable: true
         }}
         breakpoints={{
           640: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 20
           },
           768: {
             slidesPerView: 4,
-            spaceBetween: 40,
+            spaceBetween: 10
           },
           1024: {
             slidesPerView: 5,
-            spaceBetween: 50,
-          },
+            spaceBetween: 10
+          }
         }}
         modules={[Pagination]}
-        className={cn(
-          "mySwiper-pagination float-end flex-auto w-64 content-center",
-          bgClassName
-        )}
-        style={{ width: "1000px !important" }}
+        className={cn("flex-auto", bgClassName)}
       >
         {items?.map((item, index) => {
           return (
-            // <SwiperSlide className={`swiper-slider w-full border-slate-950 overflow-hidden h-[452px] ${index === 0 ? 'rounded-r-xl !important' : ''}`}>
-            <SwiperSlide className={`swiper-slider w-full border-slate-950 overflow-hidden h-[452px]`}>
+            <SwiperSlide className="overflow-hidden rounded-0">
               <ProductCard
-              index={index}
+                index={index}
                 productName="قالب فروشگاهی ایکس پرو"
                 application="قالب شرکتی"
                 numberSales="229"
