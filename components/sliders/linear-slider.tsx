@@ -9,8 +9,7 @@ import { MdKeyboardArrowLeft } from "react-icons/md"
 import { ClassNameValue } from "tailwind-merge"
 import { cn } from "@/lib/utils"
 import ProductCard from "../card/product-card"
-import { SlArrowRight } from "react-icons/sl";
-
+import { SlArrowRight } from "react-icons/sl"
 
 type SwiperProps = {
   otherProp?: string
@@ -24,12 +23,12 @@ const LinearSlider: React.FC<SwiperProps> = ({
   items,
   bgClassName,
   name,
-  logo
+  logo,
 }) => {
   return (
     <div
       className={cn(
-        "linear-slider w-full flex py-4 px-5 rounded-lg",
+        "linear-slider w-full flex py-4 px-1 rounded-lg",
         bgClassName
       )}
     >
@@ -41,7 +40,7 @@ const LinearSlider: React.FC<SwiperProps> = ({
         <div className="w-36 h-35 flex items-center justify-center text-4xl">
           {name}
         </div>
-       
+
         <div className="flex flex-col items-center h-48 justify-between">
           <Image
             src={logo.item.src}
@@ -57,32 +56,35 @@ const LinearSlider: React.FC<SwiperProps> = ({
       </div>
       <Swiper
         // slidesPerView={1}
+
+        navigation={{
+          nextEl: "#button-next-relacionados",
+          prevEl: "#button-next-relacionados",
+        }}
         spaceBetween={7}
         pagination={{
           clickable: true,
-
         }}
-   
         breakpoints={{
           640: {
             slidesPerView: 2,
-            spaceBetween: 20
+            spaceBetween: 20,
           },
           768: {
             slidesPerView: 4,
-            spaceBetween: 10
+            spaceBetween: 10,
           },
           1024: {
             slidesPerView: 5,
-            spaceBetween: 10
-          }
+            spaceBetween: 10,
+          },
         }}
         modules={[Pagination]}
         className={cn("flex-auto", bgClassName)}
       >
         {items?.map((item, index) => {
           return (
-            <SwiperSlide className="overflow-hidden rounded-0">
+            <SwiperSlide className="overflow-hidden rounded-0 bg-transparent">
               <ProductCard
                 index={index}
                 productName="قالب فروشگاهی ایکس پرو"
@@ -95,6 +97,8 @@ const LinearSlider: React.FC<SwiperProps> = ({
             </SwiperSlide>
           )
         })}
+        <div className="swiper-pagination"></div>
+        <div className="swiper-button-prev"></div>
       </Swiper>
     </div>
   )

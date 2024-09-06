@@ -10,7 +10,7 @@ import { HeroBackground } from "@/components/landing/hero-background"
 const ECommerceLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="container">
-      <div className="main-header relative right-[50%] w-[100vw] ms-[-50vw] px-4 flex flex-col items-start justify-between h-[400px] bg-cover bg-center  mb-6">
+      <div className="main-header relative right-[50%] w-[100vw] ms-[-50vw] px-4 flex flex-col  h-[400px] bg-cover bg-center">
         <HeroBackground />
         {/* <div className="absolute flex bottom-0 left-0 w-full overflow-hidden leading-none h-[100px]"> */}
         {/* <svg className=" w-0 h-24 text-white transform scale-x-[-1]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400">
@@ -27,14 +27,14 @@ const ECommerceLayout = ({ children }: { children: React.ReactNode }) => {
             ></path>
           </svg>
         </div> */}
-        <div className="flex items-center justify-between w-full ps-10 pe-10">
+        <div className="flex items-center justify-between w-full ">
           <div className=" flex items-center ms-4">
             <MainLogo />
           </div>
           <div className=" flex items-center navigate-menu">
             <NavigationMenu />
           </div>
-          <div className="flex items-center h-6 gap-4 me-4 mt-4">
+          <div className="flex items-center h-6 gap-4  mt-4">
             <LoginRegisterButton />
             <Separator orientation="vertical" className="z-10"/>
             <ShoppingCartButton />

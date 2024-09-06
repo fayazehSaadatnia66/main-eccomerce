@@ -11,7 +11,7 @@ const SearchBar = () => {
         startIcon={
           <CiSearch size={22} color="grey" />
         }
-        className="w-[500px] h-[45px] bg-zinc-100 "
+        className="w-[700px] h-[45px] bg-zinc-100 "
         placeholder="جستجو"
         endIcon={
           <Button className="custom-search-button bg-purple-800 button-search h-[40px] absolute left-[-9px] bottom-[-21px] hover:bg-purple-600">
