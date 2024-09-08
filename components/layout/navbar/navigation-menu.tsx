@@ -10,7 +10,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle
+  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { cn } from "@/lib/utils"
 import { FaLockOpen } from "react-icons/fa"
@@ -22,12 +22,14 @@ import { Separator } from "@/components/ui/separator"
 
 const MainNavigationMenu = () => {
   return (
-    <div className=" border-gray-200">
-      <NavigationMenu className="w-full " dir="rtl" >
-        <NavigationMenuList >
+    <div className="flex items-center navigate-menu border-gray-200">
+      <NavigationMenu className="w-full " dir="rtl">
+        <NavigationMenuList>
           {navItems.map(({ name, icon: Icon, children }, index) => (
             <NavigationMenuItem key={name}>
-              <NavigationMenuTrigger style={{backgroundColor:"unset !important", color:"white" }}>
+              <NavigationMenuTrigger
+                style={{ backgroundColor: "unset !important", color: "white" }}
+              >
                 <div
                   className={cn(
                     "flex justify-center",
@@ -44,7 +46,7 @@ const MainNavigationMenu = () => {
                   )} */}
                 </div>
               </NavigationMenuTrigger>
-              <NavigationMenuContent >
+              <NavigationMenuContent>
                 <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                   {/* <li className="row-span-3">
                     <NavigationMenuLink asChild>
@@ -67,7 +69,7 @@ const MainNavigationMenu = () => {
                   </li> */}
                   {children.map((childItem, index) => (
                     <ListItem
-                    style={{backgroundColor:"none !important"}}
+                      style={{ backgroundColor: "none !important" }}
                       key={childItem.name + index}
                       href={childItem.href}
                       title={childItem.name}

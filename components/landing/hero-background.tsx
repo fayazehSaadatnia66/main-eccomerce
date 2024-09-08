@@ -5,17 +5,17 @@ import "./hero-background.scss"
 export function HeroBackground() {
   return (
     <Image
-      className="wave-clip absolute z-0"
+      className="wave-clip absolute"
       alt="Mountains"
       src={img}
       // placeholder="blur"
       // quality={100}
       fill
-      sizes="100vw"
+      // sizes="80vw"
       // width={100}
       // height={120}
       style={{
-        objectFit: "cover"
+        objectFit: "cover",
         // objectPosition: "100px 200px"
         // height: 1500
       }}

@@ -34,10 +34,10 @@ const LinearSlider: React.FC<SwiperProps> = ({
     >
       <div
         className={cn(
-          "flex flex-col content-center pe-3 text-3xl text-center text-white gap-6 "
+          "flex flex-col content-center text-3xl text-center text-white gap-6 "
         )}
       >
-        <div className="w-36 h-35 flex items-center justify-center text-4xl">
+        <div className="w-36 h-35 flex items-center justify-center text-3xl">
           {name}
         </div>
 
@@ -58,8 +58,8 @@ const LinearSlider: React.FC<SwiperProps> = ({
         // slidesPerView={1}
 
         navigation={{
-          nextEl: "#button-next-relacionados",
-          prevEl: "#button-next-relacionados",
+          prevEl: ".prev",
+          nextEl: ".next",
         }}
         spaceBetween={7}
         pagination={{
@@ -79,7 +79,7 @@ const LinearSlider: React.FC<SwiperProps> = ({
             spaceBetween: 10,
           },
         }}
-        modules={[Pagination]}
+        modules={[Pagination, Navigation]}
         className={cn("flex-auto", bgClassName)}
       >
         {items?.map((item, index) => {

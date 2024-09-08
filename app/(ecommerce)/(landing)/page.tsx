@@ -14,6 +14,10 @@ import StackSlider from "@/components/sliders/stack-slider"
 import star from "@/public/images/best-seller-star.svg"
 import LinearSlider from "@/components/sliders/linear-slider"
 import ProductCategoryList from "@/components/landing/product-category-list"
+import PopularTemplate from "@/components/card/popular-template"
+import { HeroBackground } from "@/components/landing/hero-background"
+import SearchBar from "@/components/layout/header/search-bar"
+import { Button } from "@/components/ui/button"
 
 const imagesSlider = [
   { item: code1, alt: "image1" },
@@ -37,13 +41,42 @@ const pages = [
 const HomePage = () => {
   return (
     <div className="w-full flex flex-col gap-10 py-4 justify-center">
+      <div className="relative right-[50%] w-[100vw] ms-[-50vw] px-4 flex flex-col h-[400px] bg-cover bg-center"></div>
+      <HeroBackground />
+
+      <div className="text-3xl font-bold text-white flex flex-col gap-4 items-start justify-center w-full h-full z-10">
+        <div className="flex self-center text-5xl">
+          راهی بهتر برای مدیریت خود
+        </div>
+        <div className="flex self-center text-slate-200 text-xl font-normal">
+          مرجع بزرگ طراحان، وبمستران و توسعه دهندگان ایرانی
+        </div>
+        <div className="relative flex self-center items-center">
+          <SearchBar />
+        </div>
+        <div className="flex self-center gap-3 ">
+          <Button className="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-4 py-2 rounded">
+            پرفروش ترین
+          </Button>
+          <Button className="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-4 py-2 rounded">
+            جدیدترین
+          </Button>
+          <Button className="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-4 py-2 rounded">
+            ارزان ترین
+          </Button>
+          <Button className="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-4 py-2 rounded">
+            گران ترین
+          </Button>
+        </div>
+      </div>
       <ProductCategoryList />
       <LinearSlider
         items={imagesSlider}
         bgClassName={"bg-purple-800"}
         name={"پرفروش ترین‌های سایت"}
-        logo={{item:star, alt:"star"}}
+        logo={{ item: star, alt: "star" }}
       />
+      <PopularTemplate />
       <LinearBanner wrapperClassNames="py-3" text="شگفت انگیزترین قالب ها" />
       <StackSlider items={imagesSlider} />
       <MultipleCardsBanner
