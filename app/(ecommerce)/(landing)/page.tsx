@@ -14,10 +14,11 @@ import StackSlider from "@/components/sliders/stack-slider"
 import star from "@/public/images/best-seller-star.svg"
 import LinearSlider from "@/components/sliders/linear-slider"
 import ProductCategoryList from "@/components/landing/product-category-list"
-import PopularTemplate from "@/components/card/popular-template"
+import ProductHorizontal from "@/components/card/product-horizontal"
 import { HeroBackground } from "@/components/landing/hero-background"
 import SearchBar from "@/components/layout/header/search-bar"
 import { Button } from "@/components/ui/button"
+import Slider from "@/components/sliders/slider"
 
 const imagesSlider = [
   { item: code1, alt: "image1" },
@@ -41,7 +42,7 @@ const pages = [
 const HomePage = () => {
   return (
     <div className="w-full flex flex-col gap-10 py-4 justify-center">
-      <div className="relative right-[50%] w-[100vw] ms-[-50vw] px-4 flex flex-col h-[400px] bg-cover bg-center"></div>
+      {/* <div className="relative right-[50%] w-[100vw] ms-[-50vw] px-4 flex flex-col h-[400px] bg-cover bg-center"></div> */}
       <HeroBackground />
 
       <div className="text-3xl font-bold text-white flex flex-col gap-4 items-start justify-center w-full h-full z-10">
@@ -76,7 +77,7 @@ const HomePage = () => {
         name={"پرفروش ترین‌های سایت"}
         logo={{ item: star, alt: "star" }}
       />
-      <PopularTemplate />
+      <Slider />
       <LinearBanner wrapperClassNames="py-3" text="شگفت انگیزترین قالب ها" />
       <StackSlider items={imagesSlider} />
       <MultipleCardsBanner

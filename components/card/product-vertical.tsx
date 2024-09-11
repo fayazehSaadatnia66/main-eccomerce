@@ -10,14 +10,14 @@ type ProductCardProps = {
   img: { item: StaticImageData; alt: string }
   index: number
 }
-const ProductCard = ({
+const ProductVertical = ({
   productName,
   application,
   numberSales,
   score,
   price,
   img,
-  index
+  index,
 }: ProductCardProps) => {
   return (
     <Card
@@ -34,7 +34,7 @@ const ProductCard = ({
         style={{
           width: "100%",
           height: "100%",
-          objectFit: "cover"
+          objectFit: "cover",
           // objectPosition: "center",
           // height: "auto",
           // verticalAlign: "middle",
@@ -66,7 +66,7 @@ const ProductCard = ({
                 style={{
                   height: "20px !important",
                   width: "20px",
-                  marginRight: "10px"
+                  marginRight: "10px",
                 }}
               />
             </div>
@@ -75,7 +75,7 @@ const ProductCard = ({
             style={{
               borderLeft: "1px solid #e0e0e0",
               height: "55px",
-              width: "0px"
+              width: "0px",
             }}
           ></div>
           <div className="text-sm ms-1 text-gray-600">{price} تومان</div>
@@ -85,4 +85,4 @@ const ProductCard = ({
     </Card>
   )
 }
-export default ProductCard
+export default ProductVertical

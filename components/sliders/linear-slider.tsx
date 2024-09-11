@@ -8,8 +8,8 @@ import Image, { StaticImageData } from "next/image"
 import { MdKeyboardArrowLeft } from "react-icons/md"
 import { ClassNameValue } from "tailwind-merge"
 import { cn } from "@/lib/utils"
-import ProductCard from "../card/product-card"
 import { SlArrowRight } from "react-icons/sl"
+import ProductVertical from "../card/product-vertical"
 
 type SwiperProps = {
   otherProp?: string
@@ -28,7 +28,7 @@ const LinearSlider: React.FC<SwiperProps> = ({
   return (
     <div
       className={cn(
-        "linear-slider w-full flex py-4 px-1 rounded-lg",
+        "linear-slider w-full flex py-4 px-1 rounded-lg z-10",
         bgClassName
       )}
     >
@@ -37,7 +37,7 @@ const LinearSlider: React.FC<SwiperProps> = ({
           "flex flex-col content-center text-3xl text-center text-white gap-6 "
         )}
       >
-        <div className="w-36 h-35 flex items-center justify-center text-3xl">
+        <div className="w-36 h-35 flex items-center justify-center text-3xl ">
           {name}
         </div>
 
@@ -85,7 +85,7 @@ const LinearSlider: React.FC<SwiperProps> = ({
         {items?.map((item, index) => {
           return (
             <SwiperSlide className="overflow-hidden rounded-0 bg-transparent">
-              <ProductCard
+              <ProductVertical
                 index={index}
                 productName="قالب فروشگاهی ایکس پرو"
                 application="قالب شرکتی"

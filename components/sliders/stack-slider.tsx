@@ -25,7 +25,7 @@ const StackSlider: React.FC<SwiperProps> = ({ items }: SwiperProps) => {
     >
       {items.map((item, index) => {
         return (
-          <SwiperSlide key={index}  >
+          <SwiperSlide className="stack" key={index}  >
             <Image className="w-full h-full" src={item.item} alt={item.alt} />
           </SwiperSlide>
         )
