@@ -6,7 +6,7 @@ import {
   FaReact,
   FaShoppingCart,
   FaVuejs,
-  FaWordpressSimple,
+  FaWordpressSimple
 } from "react-icons/fa"
 import { BiLogoTypescript } from "react-icons/bi"
 import CardStaticColoredBorder from "../card/card-static-colored-border"
@@ -25,11 +25,11 @@ const infoCards = [
   { color: "blue", icon: BiLogoTypescript, title: "TS" },
   { color: "green", icon: FaVuejs, title: "VUE" },
   { color: "orange", icon: FaHtml5, title: "HTML" },
-  { color: "purple", icon: FaWordpressSimple , title: "WordPress" },
+  { color: "purple", icon: FaWordpressSimple, title: "WordPress" }
 ]
 const ProductCategoryList = () => {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-5 mt-[150px]">
       <div
       // className=""
       // style={{ backgroundImage: "url('/images/background1.jpg')" }}

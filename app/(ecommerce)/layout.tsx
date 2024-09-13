@@ -9,7 +9,7 @@ import { HeroBackground } from "@/components/landing/hero-background"
 const ECommerceLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="container">
-      <div className="flex items-center justify-between w-full pt-5 ">
+      <div className="flex items-center justify-between pt-5 ">
         <MainLogo />
         <NavigationMenu />
         <div className="items-baseline h-6 gap-2 flex">
