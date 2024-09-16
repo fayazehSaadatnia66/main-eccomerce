@@ -8,28 +8,28 @@ import "swiper/css/pagination"
 
 const Slider = () => {
   return (
-    // <div className="w-full h-[400px] flex gap-10">
-    <Swiper
-      pagination={{
-        type: "bullets",
-        clickable: true,
-      }}
-      navigation={true}
-      keyboard={{
-        enabled: true,
-      }}
-      mousewheel={true}
-      modules={[Pagination, Navigation, Keyboard, Mousewheel]}
-      className="mySwiper"
-    >
-      <SwiperSlide>
-        <ProductHorizontal />
-      </SwiperSlide>
-      <SwiperSlide>
-        <ProductHorizontal />
-      </SwiperSlide>
-    </Swiper>
-    //  </div>
+    <div className="w-full self-center h-[400px] flex gap-10">
+      <Swiper
+        pagination={{
+          type: "bullets",
+          clickable: true,
+        }}
+        navigation={true}
+        keyboard={{
+          enabled: true,
+        }}
+        mousewheel={true}
+        modules={[Pagination, Navigation, Keyboard, Mousewheel]}
+        className="mySwiper w-full"
+      >
+        <SwiperSlide>
+          <ProductHorizontal />
+        </SwiperSlide>
+        <SwiperSlide>
+          <ProductHorizontal />
+        </SwiperSlide>
+      </Swiper>
+    </div>
   )
 }
 export default Slider

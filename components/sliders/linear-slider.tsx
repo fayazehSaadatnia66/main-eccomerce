@@ -28,27 +28,37 @@ const LinearSlider: React.FC<SwiperProps> = ({
   return (
     <div
       className={cn(
-        "linear-slider w-full flex py-4 px-1 rounded-lg z-10",
+        "linear-slider w-[80%] self-center flex py-6 px-1  rounded-2xl  ",
         bgClassName
       )}
     >
       <div
         className={cn(
-          "flex flex-col content-center text-3xl text-center text-white gap-6 "
+          " flex flex-col content-center text-3xl h-[320px]  text-center text-white place-content-center"
         )}
       >
-        <div className="w-36 h-35 flex items-center justify-center text-3xl ">
+        <div className="w-44 flex items-center justify-center  h-[200px] ">
           {name}
         </div>
 
-        <div className="flex flex-col items-center h-48 justify-between">
-          <Image
+        {/* <div className="flex flex-col items-center h-48 justify-between"> */}
+        {/* <Image
             src={logo.item.src}
             alt={logo.alt}
             height={50}
             width={90}
             sizes="3xl"
-          />
+          /> */}
+        <div className="flex flex-col gap-10 items-center justify-around h-[300px]">
+          <div className="flex flex-col">
+          <span className="transform relative top-3 -rotate-45 text-5xl font-semibold">
+            %
+          </span>
+          <span className="transform -rotate-180 [writing-mode:vertical-rl] text-6xl font-bold">
+            )
+          </span>
+          </div>
+
           <span className="flex text-sm">
             مشاهده همه <MdKeyboardArrowLeft size={18} />
           </span>
@@ -84,7 +94,7 @@ const LinearSlider: React.FC<SwiperProps> = ({
       >
         {items?.map((item, index) => {
           return (
-            <SwiperSlide className="overflow-hidden rounded-0 bg-transparent">
+            <SwiperSlide className=" bg-transparent">
               <ProductVertical
                 index={index}
                 productName="قالب فروشگاهی ایکس پرو"
@@ -97,6 +107,7 @@ const LinearSlider: React.FC<SwiperProps> = ({
             </SwiperSlide>
           )
         })}
+        <SwiperSlide>flsdkjflsd</SwiperSlide>
         <div className="swiper-pagination"></div>
         <div className="swiper-button-prev"></div>
       </Swiper>

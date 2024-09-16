@@ -1,14 +1,22 @@
 .linear-slider {
-  .swiper-wrapper {
-    border-radius: 25px;
-  }
+  // border-radius: 15px;
+  // .name {
+  //   font-size: 1.9rem;
+  //   line-height: 2.8rem;
+  //   font-weight: 300;
+  // }
   .swiper-slide {
-    border-radius: 3px;
+    // border-radius: 25px;
     &:nth-child(1) {
-      border-radius: 0 15px 15px 0 !important;
+      border-radius: 0 25px 25px 0 ;
+      overflow: hidden;
     }
     &:last-child {
-      border-radius: 15px 0 0 15px !important;
+      border-radius: 25px 0 0 25px ;
+      // padding-left: 1rem;
+      // overflow: hidden;
+      // width: 150px;
+      margin-left: 20px !important;
     }
   }
 }
