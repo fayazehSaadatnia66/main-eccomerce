@@ -3,13 +3,18 @@ import React from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "./linear-slider.scss"
-import { Navigation, Pagination } from "swiper/modules"
+import { Navigation, Pagination, Lazy, FreeMode } from "swiper/modules"
 import Image, { StaticImageData } from "next/image"
 import { MdKeyboardArrowLeft } from "react-icons/md"
 import { ClassNameValue } from "tailwind-merge"
 import { cn } from "@/lib/utils"
 import { SlArrowRight } from "react-icons/sl"
 import ProductVertical from "../card/product-vertical"
+import {
+  PiArrowCircleLeftFill,
+  PiArrowCircleLeftLight,
+  PiArrowCircleLeftThin,
+} from "react-icons/pi"
 
 type SwiperProps = {
   otherProp?: string
@@ -28,7 +33,7 @@ const LinearSlider: React.FC<SwiperProps> = ({
   return (
     <div
       className={cn(
-        "linear-slider w-[80%] self-center flex py-6 px-1  rounded-2xl  ",
+        "linear-slider w-[80%] h-[294px] self-center flex  rounded-2xl  ",
         bgClassName
       )}
     >
@@ -51,12 +56,12 @@ const LinearSlider: React.FC<SwiperProps> = ({
           /> */}
         <div className="flex flex-col gap-10 items-center justify-around h-[300px]">
           <div className="flex flex-col">
-          <span className="transform relative top-3 -rotate-45 text-5xl font-semibold">
-            %
-          </span>
-          <span className="transform -rotate-180 [writing-mode:vertical-rl] text-6xl font-bold">
-            )
-          </span>
+            <span className="transform relative top-3 -rotate-45 text-5xl font-semibold">
+              %
+            </span>
+            <span className="transform -rotate-180 [writing-mode:vertical-rl] text-6xl font-bold">
+              )
+            </span>
           </div>
 
           <span className="flex text-sm">
@@ -68,13 +73,17 @@ const LinearSlider: React.FC<SwiperProps> = ({
         // slidesPerView={1}
 
         navigation={{
-          prevEl: ".prev",
-          nextEl: ".next",
+          // prevEl: ".prev",
+          // nextEl: ".next",
+          
         }}
-        spaceBetween={7}
-        pagination={{
-          clickable: true,
-        }}
+        freeMode={true}
+        //  effect="fade"
+        // autoFocus={false}
+        spaceBetween={10}
+        // pagination={{
+        //   clickable: false,
+        // }}
         breakpoints={{
           640: {
             slidesPerView: 2,
@@ -89,8 +98,8 @@ const LinearSlider: React.FC<SwiperProps> = ({
             spaceBetween: 10,
           },
         }}
-        modules={[Pagination, Navigation]}
-        className={cn("flex-auto", bgClassName)}
+        modules={[Pagination, Navigation, FreeMode]}
+        className={cn("flex-auto ffffffffffffffffffffffffff", bgClassName)}
       >
         {items?.map((item, index) => {
           return (
@@ -107,9 +116,33 @@ const LinearSlider: React.FC<SwiperProps> = ({
             </SwiperSlide>
           )
         })}
-        <SwiperSlide>flsdkjflsd</SwiperSlide>
-        <div className="swiper-pagination"></div>
-        <div className="swiper-button-prev"></div>
+        <SwiperSlide className="pe-5">
+          <div className="bg-white w-full h-full flex flex-col justify-center items-center cursor-pointer rounded-l-2xl">
+            {/* <div className="flex justify-center h-[50%] items-center"> */}
+            <PiArrowCircleLeftThin
+              color="#19bfd3"
+              className="w-[80px] h-[100px] "
+            />
+            <span className="text-slate-600 flex justify-center items-start h-20% text-base font-thin ">
+              مشاهده همه
+            </span>
+            {/* </div> */}
+          </div>
+        </SwiperSlide>
+        {/* <div className="swiper-pagination z-10"></div>
+
+        <div className="swiper-button-prev z-10">
+          <PiArrowCircleLeftFill
+            color="black"
+            className="w-[80px] h-[100px] "
+          />
+        </div>
+        <div className="swiper-button-next z-10">
+          <PiArrowCircleLeftFill
+            color="black"
+            className="w-[80px] h-[100px] "
+          />
+        </div> */}
       </Swiper>
     </div>
   )

@@ -21,11 +21,12 @@ const ProductVertical = ({
 }: ProductCardProps) => {
   return (
     <Card
-      className={`flex flex-col gap-4 border-0 justify-between h-full rounded-none`}
+      className={`flex flex-col gap-4 border-0 justify-between h-[87%] w-[162px]  rounded-none`}
     >
       {/* <CardContent className="p-0"> */}
       {/* <div className="w-full h-[120px] overflow-clip"> */}
       <Image
+      loading="lazy"
         // width={250}
         // height={130}
         // fill
