@@ -21,7 +21,7 @@ const ProductVertical = ({
 }: ProductCardProps) => {
   return (
     <Card
-      className={`flex flex-col gap-4 border-0 justify-between h-[87%] w-[162px]  rounded-none`}
+      className={`flex flex-col border-0 justify-between h-[87%]  rounded-none`}
     >
       {/* <CardContent className="p-0"> */}
       {/* <div className="w-full h-[120px] overflow-clip"> */}
@@ -29,7 +29,7 @@ const ProductVertical = ({
       loading="lazy"
         // width={250}
         // height={130}
-        // fill
+        // fill 
         // height={0}
         // sizes="100vw"
         style={{
@@ -50,7 +50,7 @@ const ProductVertical = ({
       />
       {/* </div> */}
       <div className="flex-col ms-3">
-        <div className="text-lg text-gray-600">{productName}</div>
+        <div className="text-base text-gray-600">{productName}</div>
         <div className="flex mb-5">
           <div className="text-sm text-slate-400 me-2">کاربرد:</div>
           <div className="text-sm text-gray-600">{application}</div>
@@ -79,7 +79,7 @@ const ProductVertical = ({
               width: "0px",
             }}
           ></div>
-          <div className="text-sm ms-1 text-gray-600">{price} تومان</div>
+          <div className="text-sm ms-4 text-gray-600">{price} تومان</div>
         </div>
       </div>
       {/* </CardContent> */}

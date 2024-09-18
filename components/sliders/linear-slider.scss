@@ -7,6 +7,9 @@
   // }
   .swiper{
     height: 294px;
+    .swiper-slide{
+      // width: 160px !important;
+    }
   }
   .swiper-button-next, .swiper-button-prev {
     border-radius: 50%;

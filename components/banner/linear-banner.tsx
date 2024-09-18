@@ -10,12 +10,16 @@ import "./linear-banner.scss"
 type LinearBannerProps = {
   wrapperClassNames?: ClassNameValue
   textClassNames?: ClassNameValue
-  text?: string
+  textLeft?: string
+  textCenter?: string
+  textRight?: string
 }
 export const LinearBanner = ({
   wrapperClassNames,
   textClassNames,
-  text,
+  textLeft,
+  textCenter,
+  textRight
 }: LinearBannerProps) => {
   return (
     <div
@@ -29,20 +33,31 @@ export const LinearBanner = ({
         <div className="flex w-[700px] align-baseline	">
           <p
             className={cn(
-              "text-purple-900 font-bold text-xl w-[220px] ms-6",
+              "text-purple-900  text-lg w-[112px] text-center ms-6",
               textClassNames
             )}
           >
-            {text}
+            {textLeft}
           </p>
-          <div>
-            <Button
-              className="flex rounded-s-3xl  rounded-e-3xl bg-purple-900"
-              style={{ placeItems: "start" }}
-            >
-              تا پایان ماه 40 درصد تخفیف
-            </Button>
-          </div>
+          <hr className="rotate-90 w-[9%] m-0 p-0 place-self-center border-1 border-[#581c87]"/>
+          <p
+            className={cn(
+              "text-purple-900  text-lg w-[100px] text-center ms-6",
+              textClassNames
+            )}  
+          >
+            {textCenter}
+          </p>
+          <hr className="rotate-90 w-[9%] m-0 p-0 place-self-center border-1 border-[#581c87]"/>
+
+          <p
+            className={cn(
+              "text-purple-900 text-lg  w-[100px] ms-6",
+              textClassNames
+            )}
+          >
+            {textRight}
+          </p>
         </div>
         <div className="flex  justify-between	">
           <div className="vuexy-icon rounded-full overflow-hidden w-32 h-32">

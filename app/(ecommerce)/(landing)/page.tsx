@@ -77,7 +77,7 @@ const HomePage = () => {
         name={"پرفروش ترین‌های سایت"}
         logo={{ item: star, alt: "star" }}
       />
-      <LinearBanner wrapperClassNames="py-3" text="شگفت انگیزترین قالب ها" />
+      <LinearBanner wrapperClassNames="py-3" textLeft="طراحی منحصربه فرد" textCenter="مناسب برای تمام مشاغل" textRight="پنل تنظیمات اختصاصی" />
       <Slider />
       <StackSlider items={imagesSlider} />
       <MultipleCardsBanner

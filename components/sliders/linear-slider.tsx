@@ -33,16 +33,16 @@ const LinearSlider: React.FC<SwiperProps> = ({
   return (
     <div
       className={cn(
-        "linear-slider w-[80%] h-[294px] self-center flex  rounded-2xl  ",
+        "linear-slider w-[80%] h-[294px] self-center flex  rounded-2xl  overflow-hidden",
         bgClassName
       )}
     >
       <div
         className={cn(
-          " flex flex-col content-center text-3xl h-[320px]  text-center text-white place-content-center"
+          " flex flex-col content-center text-2xl h-[284px]  text-center text-white place-content-center"
         )}
       >
-        <div className="w-44 flex items-center justify-center  h-[200px] ">
+        <div className="w-36 flex items-center justify-center  h-[200px] ">
           {name}
         </div>
 
@@ -70,7 +70,7 @@ const LinearSlider: React.FC<SwiperProps> = ({
         </div>
       </div>
       <Swiper
-        // slidesPerView={1}
+        slidesPerView={"auto"}
 
         navigation={{
           // prevEl: ".prev",
@@ -80,7 +80,8 @@ const LinearSlider: React.FC<SwiperProps> = ({
         freeMode={true}
         //  effect="fade"
         // autoFocus={false}
-        spaceBetween={10}
+        spaceBetween={9}
+        
         // pagination={{
         //   clickable: false,
         // }}
@@ -99,7 +100,7 @@ const LinearSlider: React.FC<SwiperProps> = ({
           },
         }}
         modules={[Pagination, Navigation, FreeMode]}
-        className={cn("flex-auto ffffffffffffffffffffffffff", bgClassName)}
+        className={cn("flex-auto ", bgClassName)}
       >
         {items?.map((item, index) => {
           return (
@@ -116,8 +117,8 @@ const LinearSlider: React.FC<SwiperProps> = ({
             </SwiperSlide>
           )
         })}
-        <SwiperSlide className="pe-5">
-          <div className="bg-white w-full h-full flex flex-col justify-center items-center cursor-pointer rounded-l-2xl">
+        <SwiperSlide className="pe-4">
+          <div className="bg-white w-full h-[87%] flex flex-col justify-center items-center cursor-pointer rounded-l-2xl">
             {/* <div className="flex justify-center h-[50%] items-center"> */}
             <PiArrowCircleLeftThin
               color="#19bfd3"

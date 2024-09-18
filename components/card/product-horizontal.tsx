@@ -5,15 +5,15 @@ import { Button } from "../ui/button"
 
 const ProductHorizontal = () => {
   return (
-    <div className="flex flex-row  rounded-lg w-full gap-5">
-      <Card className="rounded-lg overflow-hidden w-full">
-        <Image src={popular} alt="popular" width={700} height={50} />
+    <div className="flex flex-row  rounded-lg w-full gap-5 h-[239px]">
+      <Card className="rounded-lg overflow-hidden w-full ">
+        <Image src={popular} alt="popular" className="h-[239px]" />
       </Card>
-      <Card className="rounded-lg overflow-hidden w-full">
-        <div className=" flex flex-col gap-5 ms-2 h-full w-full">
-          <div className="h-[150px] flex flex-col gap-10 mt-4">
-            <div className=" text-2xl mb-4">قالب مدیریت ویو جی اس vuero</div>
-            <div className="text-2xl">دسته بندی:وب اپلیکیشن</div>
+      <Card className="rounded-lg overflow-hidden w-full ">
+        <div className=" flex flex-col gap-5 ms-2 h-[239px] w-full">
+          <div className="h-[120px] flex flex-col gap-5 mt-2 font-semibold">
+            <div className=" text-lg ">قالب مدیریت ویو جی اس vuero</div>
+            <div className="text-lg">دسته بندی:وب اپلیکیشن</div>
           </div>
           <hr className="w-[90%] place-self-center border-1 border-black" />
           <div className="w-full h-full flex flex-row ">
@@ -26,22 +26,22 @@ const ProductHorizontal = () => {
               </Button>
             </div>
             <div className="basis-auto flex  w-full h-full justify-around ">
-              <div className="flex flex-col">
-                <div className="text-red-600">97</div>
-                <div>فروش</div>
+              <div className="flex flex-col gap-2 text-center font-thin	">
+                <div className="text-red-600 text-xl">97</div>
+                <div className="text-lg">فروش</div>
               </div>
-              <div className="flex flex-col">
-                <div className="text-purple-800">100٪</div>
-                <div>رضایت</div>
+              <div className="flex flex-col gap-2 text-center font-thin	">
+                <div className="text-purple-800 text-xl">100٪</div>
+                <div className="text-lg">رضایت</div>
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col gap-2 text-center font-thin	">
                 <div className="flex gap-3">
-                  <div className="flex ">400,000</div>
+                  <div className="flex text-xl line-through">400,000</div>
                   <Button className="bg-fuchsia-700 h-[25px] w-[30px]">
                     40%
                   </Button>
                 </div>
-                <div>350,000 تومان</div>
+                <div className="text-lg font-semibold">350,000 تومان</div>
               </div>
             </div>
           </div>
