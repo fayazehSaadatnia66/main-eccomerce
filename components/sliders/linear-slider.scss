@@ -5,6 +5,7 @@
   //   line-height: 2.8rem;
   //   font-weight: 300;
   // }
+
   .swiper{
     height: 294px;
     .swiper-slide{
@@ -25,7 +26,7 @@
       position: relative;
       left: -1px;
     }
-    &.swiper-button-disabled {
+    &.swiper-button-disabled {  
       opacity: 0;
     }
   }

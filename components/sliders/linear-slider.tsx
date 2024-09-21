@@ -21,7 +21,7 @@ type SwiperProps = {
   items: { item: StaticImageData; alt: string }[]
   bgClassName?: ClassNameValue
   name: string
-  logo: { item: StaticImageData; alt: string }
+  logo?: { item: StaticImageData; alt: string }
 }
 
 const LinearSlider: React.FC<SwiperProps> = ({
@@ -33,7 +33,7 @@ const LinearSlider: React.FC<SwiperProps> = ({
   return (
     <div
       className={cn(
-        "linear-slider w-[80%] h-[294px] self-center flex  rounded-2xl  overflow-hidden",
+        "linear-slider w-[80%] h-[294px] self-center flex  rounded-2xl rounded-b-xl   overflow-hidden bg-purple-700",
         bgClassName
       )}
     >
@@ -117,19 +117,19 @@ const LinearSlider: React.FC<SwiperProps> = ({
             </SwiperSlide>
           )
         })}
-        <SwiperSlide className="pe-4">
-          <div className="bg-white w-full h-[87%] flex flex-col justify-center items-center cursor-pointer rounded-l-2xl">
+        {/* <SwiperSlide className="pe-4"> */}
+          {/* <div className="bg-white w-full h-[87%] flex flex-col justify-center items-center cursor-pointer rounded-l-2xl"> */}
             {/* <div className="flex justify-center h-[50%] items-center"> */}
-            <PiArrowCircleLeftThin
+            {/* <PiArrowCircleLeftThin
               color="#19bfd3"
               className="w-[80px] h-[100px] "
             />
             <span className="text-slate-600 flex justify-center items-start h-20% text-base font-thin ">
               مشاهده همه
-            </span>
+            </span> */}
             {/* </div> */}
-          </div>
-        </SwiperSlide>
+          {/* </div> */}
+        {/* </SwiperSlide> */}
         {/* <div className="swiper-pagination z-10"></div>
 
         <div className="swiper-button-prev z-10">

@@ -8,28 +8,33 @@ import "swiper/css/pagination"
 
 const Slider = () => {
   return (
-    <div className="slider-horizontal w-full self-center h-[400px] flex gap-10">
-      <Swiper
-        pagination={{
-          // type: "bullets",
-          clickable: true,
-          bulletActiveClassName: "swiper-pagination-bullet-active",
-        }}
-        navigation={true} 
-        keyboard={{
-          enabled: true,
-        }}
-        mousewheel={true}
-        modules={[Pagination, Navigation, Keyboard, Mousewheel]}
-        className="mySwiper w-full h-full"
-      >
-        <SwiperSlide>
-          <ProductHorizontal />
-        </SwiperSlide>
-        <SwiperSlide>
-          <ProductHorizontal />
-        </SwiperSlide>
-      </Swiper>
+    <div className=" flex-col">
+      <div className="ms-72 font-bold text-xl">
+        محبوب ترین قالب ها و افزونه ها
+      </div>
+      <div className="slider-horizontal w-full self-center h-[400px] flex gap-10">
+        <Swiper
+          pagination={{
+            // type: "bullets",
+            clickable: true,
+            bulletActiveClassName: "swiper-pagination-bullet-active",
+          }}
+          navigation={true}
+          keyboard={{
+            enabled: true,
+          }}
+          mousewheel={true}
+          modules={[Pagination, Navigation, Keyboard, Mousewheel]}
+          className="mySwiper w-full h-full"
+        >
+          <SwiperSlide>
+            <ProductHorizontal />
+          </SwiperSlide>
+          <SwiperSlide>
+            <ProductHorizontal />
+          </SwiperSlide>
+        </Swiper>
+      </div>
     </div>
   )
 }

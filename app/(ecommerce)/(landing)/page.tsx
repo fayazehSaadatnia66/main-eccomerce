@@ -19,6 +19,7 @@ import { HeroBackground } from "@/components/landing/hero-background"
 import SearchBar from "@/components/layout/header/search-bar"
 import { Button } from "@/components/ui/button"
 import Slider from "@/components/sliders/slider"
+import TabSlider from "@/components/sliders/tabs-slider"
 
 const imagesSlider = [
   { item: code1, alt: "image1" },
@@ -79,7 +80,7 @@ const HomePage = () => {
       />
       <LinearBanner wrapperClassNames="py-3" textLeft="طراحی منحصربه فرد" textCenter="مناسب برای تمام مشاغل" textRight="پنل تنظیمات اختصاصی" />
       <Slider />
-      <StackSlider items={imagesSlider} />
+      {/* <StackSlider items={imagesSlider} /> */}
       <MultipleCardsBanner
         items={[
           {
@@ -92,6 +93,7 @@ const HomePage = () => {
           },
         ]}
       />
+      <TabSlider />
     </div>
   )
 }

@@ -10,9 +10,9 @@ type LinearBannerProps = {
 }
 export const MultipleCardsBanner = ({ items = [] }: LinearBannerProps) => {
   return (
-    <div className={cn("w-full flex justify-between h-min-[200px]")}>
+    <div className={cn("w-full flex  h-min-[200px] place-content-center")}>
       {items.map(({ src, alt }, index) => (
-        <div key={alt + index} className="rounded-2xl overflow-hidden">
+        <div key={alt + index} className="rounded-2xl overflow-hidden me-5">
           <Image
             src={src}
             alt={alt || ""}
