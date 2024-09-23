@@ -24,6 +24,8 @@ import {
 } from "@/components/ui/card"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import Parallax from "@/components/slider-parallax/slider-parallax"
+import ParallaxSlider from "@/components/slider-parallax/slider-parallax"
 
 const detail = () => {
   return (
@@ -65,7 +67,7 @@ const detail = () => {
       <p className="mb-4 scroll-m-20 text-4xl tracking-tight">
         قالب شخصی و نمونه کار توپیگو
       </p>
-      <div className="flex justify-between ">
+      <div className="flex justify-between">
         <div className=" basis-9/12 me-9">
           <Image
             src={popular}
@@ -140,6 +142,9 @@ const detail = () => {
             <p className="scroll-m-20 text-3xl tracking-tight">
               محصولات دیگر
             </p>
+          </div>
+          <div className="mb-64" style={{ width: 1132 }}>
+            <ParallaxSlider />
           </div>
         </div>
         <div className="basis-4/12">
