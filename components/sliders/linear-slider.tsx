@@ -22,6 +22,8 @@ type SwiperProps = {
   bgClassName?: ClassNameValue
   name: string
   logo?: { item: StaticImageData; alt: string }
+  className?: string
+  slidePreView?: number | "auto"
 }
 
 const LinearSlider: React.FC<SwiperProps> = ({
@@ -29,12 +31,15 @@ const LinearSlider: React.FC<SwiperProps> = ({
   bgClassName,
   name,
   logo,
+  className,
+  slidePreView = "auto",
 }) => {
   return (
     <div
       className={cn(
-        "linear-slider w-[80%] h-[294px] self-center flex  rounded-2xl rounded-b-xl   overflow-hidden bg-purple-700",
-        bgClassName
+        "linear-slider w-[80%] h-[320px] self-center flex  rounded-2xl rounded-b-xl   overflow-hidden bg-purple-700",
+        bgClassName,
+        className
       )}
     >
       <div
@@ -70,41 +75,45 @@ const LinearSlider: React.FC<SwiperProps> = ({
         </div>
       </div>
       <Swiper
-        slidesPerView={"auto"}
-
-        navigation={{
-          // prevEl: ".prev",
-          // nextEl: ".next",
-          
-        }}
+        slidesPerView={slidePreView}
+        navigation={
+          {
+            // prevEl: ".prev",
+            // nextEl: ".next",
+          }
+        } 
         freeMode={true}
         //  effect="fade"
         // autoFocus={false}
         spaceBetween={9}
-        
         // pagination={{
         //   clickable: false,
         // }}
-        breakpoints={{
+        breakpoints={!slidePreView ? {
           640: {
             slidesPerView: 2,
             spaceBetween: 20,
           },
           768: {
-            slidesPerView: 4,
+            slidesPerView: 4 ,
             spaceBetween: 10,
           },
           1024: {
-            slidesPerView: 5,
+            slidesPerView: 5 ,
             spaceBetween: 10,
           },
-        }}
+        }: {}}
         modules={[Pagination, Navigation, FreeMode]}
-        className={cn("flex-auto ", bgClassName)}
+        className={cn("flex-auto self-center", bgClassName)}
       >
         {items?.map((item, index) => {
           return (
-            <SwiperSlide className=" bg-transparent">
+            <SwiperSlide
+              className={cn(
+                " bg-transparent ",
+                items.length < 6 && "last:rounded-l-2xl overflow-hidden"
+              )}
+            >
               <ProductVertical
                 index={index}
                 productName="قالب فروشگاهی ایکس پرو"
@@ -117,33 +126,23 @@ const LinearSlider: React.FC<SwiperProps> = ({
             </SwiperSlide>
           )
         })}
-        {/* <SwiperSlide className="pe-4"> */}
-          {/* <div className="bg-white w-full h-[87%] flex flex-col justify-center items-center cursor-pointer rounded-l-2xl"> */}
-            {/* <div className="flex justify-center h-[50%] items-center"> */}
-            {/* <PiArrowCircleLeftThin
-              color="#19bfd3"
-              className="w-[80px] h-[100px] "
-            />
-            <span className="text-slate-600 flex justify-center items-start h-20% text-base font-thin ">
-              مشاهده همه
-            </span> */}
-            {/* </div> */}
-          {/* </div> */}
-        {/* </SwiperSlide> */}
-        {/* <div className="swiper-pagination z-10"></div>
+        {items.length > 6 && (
+          <SwiperSlide className="pe-4">
+            <div className="bg-white w-full h-[100%] flex flex-col justify-center items-center cursor-pointer rounded-l-2xl">
+              <div className="flex justify-center h-[50%] items-center">
+                <PiArrowCircleLeftThin
+                  color="#19bfd3"
+                  className="w-[80px] h-[100px] "
+                />
+                <span className="text-slate-600 flex justify-center items-start h-20% text-base font-thin ">
+                  مشاهده همه
+                </span>
+              </div>
+            </div>
+          </SwiperSlide>
+        )}
 
-        <div className="swiper-button-prev z-10">
-          <PiArrowCircleLeftFill
-            color="black"
-            className="w-[80px] h-[100px] "
-          />
-        </div>
-        <div className="swiper-button-next z-10">
-          <PiArrowCircleLeftFill
-            color="black"
-            className="w-[80px] h-[100px] "
-          />
-        </div> */}
+        {/* <div className="swiper-pagination z-10"></div> */}
       </Swiper>
     </div>
   )

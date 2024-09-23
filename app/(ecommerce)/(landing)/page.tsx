@@ -20,6 +20,7 @@ import SearchBar from "@/components/layout/header/search-bar"
 import { Button } from "@/components/ui/button"
 import Slider from "@/components/sliders/slider"
 import TabSlider from "@/components/sliders/tabs-slider"
+import QuickAccessProducts from "@/components/landing/quick-access-products"
 
 const imagesSlider = [
   { item: code1, alt: "image1" },
@@ -77,9 +78,16 @@ const HomePage = () => {
         bgClassName={"bg-[#d22c4e]"}
         name={"پرفروش ترین‌های سایت"}
         logo={{ item: star, alt: "star" }}
+        slidePreView={5}
       />
-      <LinearBanner wrapperClassNames="py-3" textLeft="طراحی منحصربه فرد" textCenter="مناسب برای تمام مشاغل" textRight="پنل تنظیمات اختصاصی" />
+      <LinearBanner
+        wrapperClassNames="py-3"
+        textLeft="طراحی منحصربه فرد"
+        textCenter="مناسب برای تمام مشاغل"
+        textRight="پنل تنظیمات اختصاصی"
+      />
       <Slider />
+      <QuickAccessProducts />
       {/* <StackSlider items={imagesSlider} /> */}
       <MultipleCardsBanner
         items={[
@@ -93,7 +101,7 @@ const HomePage = () => {
           },
         ]}
       />
-      <TabSlider />
+      {/* <TabSlider /> */}
     </div>
   )
 }

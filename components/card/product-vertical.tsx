@@ -21,7 +21,7 @@ const ProductVertical = ({
 }: ProductCardProps) => {
   return (
     <Card
-      className={`flex flex-col border-0 justify-between h-[87%]  rounded-none`}
+      className={`flex flex-col border-0 justify-between h-[100%]  rounded-none`}
     >
       {/* <CardContent className="p-0"> */}
       {/* <div className="w-full h-[120px] overflow-clip"> */}
