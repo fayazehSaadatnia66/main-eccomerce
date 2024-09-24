@@ -1,0 +1,11 @@
+.customHr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    #83807c 50%,
+    transparent 50%
+  );
+  background-size: 12px;
+  margin-bottom: 12px;
+}

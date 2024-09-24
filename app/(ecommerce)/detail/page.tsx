@@ -24,13 +24,13 @@ import {
 } from "@/components/ui/card"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import Parallax from "@/components/slider-parallax/slider-parallax"
 import ParallaxSlider from "@/components/slider-parallax/slider-parallax"
+import "./style.scss"
 
 const detail = () => {
   return (
-    <div className="container">
-      <Breadcrumb>
+    <div>
+      <Breadcrumb className="mt-5">
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink href="/" className="text-base">
@@ -68,7 +68,7 @@ const detail = () => {
         قالب شخصی و نمونه کار توپیگو
       </p>
       <div className="flex justify-between">
-        <div className=" basis-9/12 me-9">
+        <div className=" w-2/3 me-9">
           <Image
             src={popular}
             alt="popular"
@@ -87,6 +87,7 @@ const detail = () => {
           <h4 className="mt-10 mb-3 scroll-m-20 text-3xl tracking-tight">
             معرفی قالب
           </h4>
+          <hr className="customHr" />
           <p className="leading-9 text-justify">
             اگر به دنبال راه اندازی یک سایت در زمینه ارز دیجیتال هستید قالب
             رمزینه مناسب شماست. این قالب دارای امکاناتی مانند نمودار قیمتی
@@ -112,6 +113,7 @@ const detail = () => {
           <p className="mt-10 mb-3 scroll-m-20 text-3xl tracking-tight">
             امکانات قالب
           </p>
+          <hr className="customHr" />
           <p className="leading-9 text-justify">
             این قالب سایت با بهره گیری از طراحی روز در کنار تنظیمات پیشرفته
             طراحی شده است و انواع طرح‌بندی برای وبلاگ و نمونه کارها را
@@ -143,12 +145,12 @@ const detail = () => {
               محصولات دیگر
             </p>
           </div>
-          <div className="mb-64" style={{ width: 1132 }}>
+          <div className="mb-64 w-3/3">
             <ParallaxSlider />
           </div>
         </div>
-        <div className="basis-4/12">
-          <Card className="p-4">
+        <div className="w-1/3">
+          <Card className="p-4 sticky top-12">
             <CardContent className="space-y-5">
               <div className="flex justify-between">
                 <p>ورژن</p>
