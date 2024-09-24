@@ -35,7 +35,7 @@ const TabSlider = () => {
       className=" w-[1500px] text-center tabs-slider self-center bg-none"
       dir="rtl"
     >
-      <TabsList className="ggggggggggggggggggggggggggggggg flex w-full justify-center tabs-list ">
+      <TabsList className=" flex w-full justify-center tabs-list ">
         <TabsTrigger
           value="vue"
           className="basis-1/4 h-10 px-0  hover:bg-purple-200 data-[state=active]:bg-purple-700 rounded-b-0 overflow-hidden data-[state=active]:text-white  "

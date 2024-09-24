@@ -12,7 +12,7 @@ const Slider = () => {
       <div className="ms-72 font-bold text-xl">
         محبوب ترین قالب ها و افزونه ها
       </div>
-      <div className="slider-horizontal w-full self-center h-[400px] flex gap-10">
+      <div className="slider-horizontal w-full self-center h-[300px] flex gap-10">
         <Swiper
           pagination={{
             // type: "bullets",

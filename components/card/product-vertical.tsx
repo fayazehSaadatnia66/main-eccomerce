@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image"
 import { Card, CardContent } from "../ui/card"
 import star from "@/public/images/star.png"
+import { cn } from "@/lib/utils"
 type ProductCardProps = {
   productName: string
   application: string
@@ -9,27 +10,32 @@ type ProductCardProps = {
   price: number
   img: { item: StaticImageData; alt: string }
   index: number
+  className?: string
 }
 const ProductVertical = ({
   productName,
   application,
   numberSales,
   score,
+  className,
   price,
   img,
   index,
 }: ProductCardProps) => {
   return (
     <Card
-      className={`flex flex-col border-0 justify-between h-[100%]  rounded-none`}
+      className={cn(
+        "flex flex-col border-0 justify-between h-[100%]  rounded-none",
+        className
+      )}
     >
       {/* <CardContent className="p-0"> */}
       {/* <div className="w-full h-[120px] overflow-clip"> */}
       <Image
-      loading="lazy"
+        loading="lazy"
         // width={250}
         // height={130}
-        // fill 
+        // fill
         // height={0}
         // sizes="100vw"
         style={{
@@ -43,15 +49,13 @@ const ProductVertical = ({
           // backgroundSize: "cover",
           // shapeMargin: "0.75rem"
         }}
-        className="overflow-hidden"
-        // className="rounded-br-3xl w-[320px] h-[300px]  border-1  border-slate-950 mb-4"
+        className="overflow-hidden rounded-br-2xl"
         src={img.item}
         alt={img.alt}
       />
-      {/* </div> */}
-      <div className="flex-col ms-3">
-        <div className="text-base text-gray-600">{productName}</div>
-        <div className="flex mb-5">
+      <div className="flex-col rounded-bl-3xl bg-gray-100 rounded-tl-3xl border-l-gray-300">
+        <div className="text-base text-gray-600 text-start ms-2">{productName}</div>
+        <div className="flex mb-5 ms-2">
           <div className="text-sm text-slate-400 me-2">کاربرد:</div>
           <div className="text-sm text-gray-600">{application}</div>
         </div>
