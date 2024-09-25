@@ -5,13 +5,13 @@ import { Button } from "../ui/button"
 
 const ProductHorizontal = () => {
   return (
-    <div className="flex flex-row  rounded-lg w-full gap-5 h-[239px]">
+    <div className="flex flex-row  rounded-lg w-full gap-5 h-[299px]">
       <Card className="rounded-lg overflow-hidden w-full ">
-        <Image src={popular} alt="popular" className="h-[239px]" />
+        <Image src={popular} alt="popular" className="h-[299px]" />
       </Card>
-      <Card className="rounded-lg overflow-hidden w-full ">
-        <div className=" flex flex-col gap-5 ms-2 h-[239px] w-full">
-          <div className="h-[120px] flex flex-col gap-5 mt-2 font-semibold">
+      <Card className="rounded-lg overflow-hidden w-full bg-gray-100">
+        <div className=" flex flex-col gap-5 ms-2 h-[299px] w-full">
+          <div className="h-[150px] flex flex-col gap-5 p-10 font-semibold">
             <div className=" text-lg ">قالب مدیریت ویو جی اس vuero</div>
             <div className="text-lg">دسته بندی:وب اپلیکیشن</div>
           </div>

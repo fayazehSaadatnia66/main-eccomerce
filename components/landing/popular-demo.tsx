@@ -6,7 +6,7 @@ const PopularDemo = () => {
   return (
     <div className="bg-violet-200 h-[350px] flex mt-28 ">
       <div className=" flex justify-center  relative bottom-[80px] right-[50px]">
-        <Card className="w-[1000px] h-[420px] bg-gradient-to-l from-purple-700 to-indigo-700">
+        <Card className="w-[900px] h-[400px] bg-gradient-to-l from-purple-700 to-indigo-700">
           <CardHeader>
             <div className="flex justify-between items-center text-white">
               <div className="flex">
@@ -61,6 +61,7 @@ const PopularDemo = () => {
           </p>
         </div>
       </div>
+     
     </div>
   )
 }

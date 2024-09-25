@@ -22,6 +22,7 @@ import Slider from "@/components/sliders/slider"
 import TabSlider from "@/components/sliders/tabs-slider"
 import QuickAccessProducts from "@/components/landing/quick-access-products"
 import PopularDemo from "@/components/landing/popular-demo"
+import FooterPage from "@/components/landing/footer-page"
 
 const imagesSlider = [
   { item: code1, alt: "image1" },
@@ -103,6 +104,9 @@ const HomePage = () => {
         ]}
       />
       <PopularDemo />
+      <hr />
+      <FooterPage />
+
       {/* <TabSlider /> */}
     </div>
   )
