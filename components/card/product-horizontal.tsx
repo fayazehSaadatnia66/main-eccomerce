@@ -21,7 +21,7 @@ const ProductHorizontal = () => {
               <Button className="bg-purple-800 w-[250px]">
                 افزودن به سبد خرید
               </Button>
-              <Button className="bg-gray-100 text-purple-800 w-[250px]">
+              <Button className="bg-gray-300 text-purple-800 w-[250px]">
                 پیش نمایش
               </Button>
             </div>

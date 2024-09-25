@@ -71,10 +71,10 @@ const QuickAccessProducts = () => {
               <Button
                 onClick={() => setActivebtn(cat)}
                 className={cn(
-                  "w-[150px]",
+                  "w-[150px] ",
                   activebtn === cat
-                    ? "bg-[#6fd06f] text-black hover:bg-gray-200" 
-                    : "bg-gray-300 text-gray-700 hover:bg-gray-200" 
+                    ? "bg-[#6fd06f] text-black hover:bg-[#058705]" 
+                    : "bg-gray-300 text-gray-700 hover:bg-unset" 
                 )}
               >
                 {cat}
@@ -100,7 +100,7 @@ const QuickAccessProducts = () => {
         </div>
       </div>
       <div>
-        <Button className="text-gray-600 bg-white border border-gray-300 rounded-2xl  hover:bg-gray-200">
+        <Button className="text-gray-600 bg-white h-[40px] border border-gray-300 rounded-xl  hover:bg-gray-200">
           مشاهده همه
         </Button>
       </div>

@@ -16,38 +16,37 @@ const FooterPage = () => {
           <div>۷ روز هفته، 24 ساعته پاسخگوی شما هستیم.</div>
         </div>
       </div>
-      <div className="flex flex-row w-full justify-between">
+      <div className="flex flex-row w-full justify-between items-baseline">
         <div className="flex flex-row gap-16 w-[50%]">
           <div className="flex flex-col text-gray-600 w-[25%]">
-            <div className="font-bold text-black items-center mb-3 text-lg">
+            <div className="font-bold text-black items-center mb-3 text-2xl">
               معرفی
             </div>
-            <div className="text-sm">درباره کدمارکت</div>
-            <div className="text-sm">فرصت های شغلی</div>
-            <div className="text-sm">اطلاعات تماس</div>
-            <div className="text-sm">قوانین و مقررات</div>
+            <div className="text-lg">درباره کدمارکت</div>
+            <div className="text-lg">فرصت های شغلی</div>
+            <div className="text-lg">اطلاعات تماس</div>
+            <div className="text-lg">قوانین و مقررات</div>
           </div>
           <div className="flex flex-col text-gray-600 w-[25%]">
-            <div className="font-bold text-black items-center mb-3 text-lg">
+            <div className="font-bold text-black items-center mb-3 text-2xl">
               خدمات
             </div>
-            <div className="text-sm">ضمانت بازگشت وجه</div>
-            <div className="text-sm">پشتیبانی سریع</div>
+            <div className="text-lg">ضمانت بازگشت وجه</div>
+            <div className="text-lg">پشتیبانی سریع</div>
           </div>
         </div>
         <div className="flex flex-col gap-3">
-          <div>همراه ما باشید!</div>
+          <div className="text-2xl font-bold">همراه ما باشید!</div>
           <div className="flex flex-row gap-6">
             <PiInstagramLogoThin size={30} />
             <PiYoutubeLogoThin size={30} />
           </div>
-          <div className="text-gray-600">با ثبت ایمیل از جدیدترین ها باخبر شوید</div>
-          <div className="flex flex-row gap-10 ms-5">
-            <div className="w-1/2 text-gray-500">ایمیل شما</div>
-            <Button className="w-1/2 bg-gray-200 hover:bg-unset">ثبت</Button>
+          <div className="text-gray-600 text-lg">با ثبت ایمیل از جدیدترین تخفیف ها باخبر شوید</div>
+          <div className="flex flex-row gap-10 ms-5 items-baseline">
+            <div className="w-1/2 text-gray-500 text-lg">ایمیل شما</div>
+            <Button className="w-1/2 bg-gray-200 hover:bg-unset ">ثبت</Button>
           </div>
         </div>
-        <div></div>
       </div>
     </div>
  
