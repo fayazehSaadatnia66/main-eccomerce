@@ -24,7 +24,7 @@ export const LinearBanner = ({
   return (
     <div
       className={cn(
-        "linear-banner w-full rounded-md py-3 px-4 h-min-[100px] bg-zinc-200",
+        "linear-banner rounded-md py-3 px-4 h-min-[100px] bg-zinc-200 ",
         wrapperClassNames
       )}
     >

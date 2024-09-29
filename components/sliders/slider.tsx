@@ -12,12 +12,12 @@ const Slider = () => {
       <div className="ms-72 font-bold text-xl">
         محبوب ترین قالب ها و افزونه ها
       </div>
-      <div className="slider-horizontal w-full self-center h-[400px] flex gap-10">
+      <div className="slider-horizontal w-full self-center h-[330px] flex gap-10">
         <Swiper
           pagination={{
             // type: "bullets",
             clickable: true,
-            bulletActiveClassName: "swiper-pagination-bullet-active",
+            bulletActiveClass: "swiper-pagination-bullet-active",
           }}
           navigation={true}
           keyboard={{
@@ -25,7 +25,7 @@ const Slider = () => {
           }}
           mousewheel={true}
           modules={[Pagination, Navigation, Keyboard, Mousewheel]}
-          className="mySwiper w-full h-full"
+          className="mySwiper w-full h-[500px]"
         >
           <SwiperSlide>
             <ProductHorizontal />

@@ -35,29 +35,31 @@ const TabSlider = () => {
       className=" w-[1500px] text-center tabs-slider self-center bg-none"
       dir="rtl"
     >
-      <TabsList className="flex w-full justify-center tabs-list gap-3">
+      <TabsList className=" flex w-full justify-center tabs-list ">
         <TabsTrigger
           value="vue"
-          className="basis-1/4 h-10 ggggggggggggggggggggggg  hover:bg-purple-200 data-[state=active]:bg-purple-700  data-[state=active]:text-white  rounded-t-xl"
+          className="basis-1/4 h-10 px-0  hover:bg-purple-200 data-[state=active]:bg-purple-700 rounded-b-0 overflow-hidden data-[state=active]:text-white  "
         >
           ویو
         </TabsTrigger>
         <TabsTrigger
           value="react"
-          className="basis-1/4 h-10 hover:bg-purple-200 data-[state=active]:bg-purple-700 data-[state=active]:text-white  rounded-t-xl"
+          className="basis-1/4 h-10 -10  hover:bg-purple-200 data-[state=active]:bg-purple-700 rounded-b-0 data-[state=active]:text-white  "
         >
           ری اکت
         </TabsTrigger>
         <TabsTrigger
           value="angolar"
-          className="basis-1/4 h-10 hover:bg-purple-200 data-[state=active]:bg-purple-700 data-[state=active]:text-white  rounded-t-xl"
+          className="basis-1/4 h-10 -10 hover:bg-purple-200 data-[state=active]:bg-purple-700 rounded-b-0 data-[state=active]:text-white  "
         >
           انگولار
         </TabsTrigger>
       </TabsList>
-      <div className="tabs-content flex-row text-center">
+      <div className="tabs-content flex-row text-center ">
         <TabsContent value="vue" className="data-[state=active]:mt-0 ">
           <LinearSlider
+            slidePreView={vueProducts.length}
+            className="px-10 w-[20%] !important"
             items={vueProducts}
             name="قالب های اختصاصی"
             bgClassName={"bg-purple-700"}
@@ -78,6 +80,8 @@ const TabSlider = () => {
         </TabsContent>
         <TabsContent value="react" className="data-[state=active]:mt-0">
           <LinearSlider
+            className="px-10 w-[20%] !important"
+            slidePreView={reactProducts.length}
             items={reactProducts}
             name="قالب های اختصاصی"
             bgClassName={"bg-purple-700"}
@@ -98,6 +102,8 @@ const TabSlider = () => {
         </TabsContent>
         <TabsContent value="angolar" className="data-[state=active]:mt-0">
           <LinearSlider
+            className="px-10 w-[20%] !important"
+            slidePreView={angolarProducts.length}
             items={angolarProducts}
             name="قالب های اختصاصی"
             bgClassName={"bg-purple-700"}

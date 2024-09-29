@@ -17,7 +17,7 @@ export function HeroBackground() {
             viewBox="0 24 150 28"
             preserveAspectRatio="none"
             shape-rendering="auto"
-          >
+          > 
             <defs>
               <path
                 id="gentle-wave"
